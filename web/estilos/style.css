@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--c4);
+    font-family: 'Poppins', sans-serif;
+    --c1: #22333B;
+    --c2: #c6ad8f;
+    --c3: #FAF9F6;
+    --c4: #F2E8CF;
+    --c5: #F2D0A4;
+}
+
+header {
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--c1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    color: var(--c3);
+    box-shadow: 0px 4px 15px var(--c4);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    margin-top: 15px;
+}
+
+.nav-buttons {
+    text-decoration: none;
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+header .nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+header .nav-buttons button {
+    background-color: var(--c1);
+    color: var(--c3);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+header .nav-buttons button:hover {
+    background-color: var(--c1);
+    color: var(--c4);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.recommendations,
+.recent-activities {
+    width: 45%;
+}
+
+.recommendations h2,
+.recent-activities h2 {
+    margin-top: 0;
+    color: black;
+    border-bottom: 2px solid var(--c1);
+    padding-bottom: 5px;
+}
+
+.book-card,
+.activity-card {
+    background-color: var(--c3);
+    border: 1px solid var(--c3);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.book-card img {
+    width: 20%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.book-info,
+.activity-info {
+    margin-top: 10px;
+}
+
+.book-info h3,
+.activity-info h3 {
+    margin: 0;
+    font-size: 15px;
+    color: black;
+}
+
+.book-info p,
+.activity-info p {
+    margin: 5px 0;
+    color: var(--c1);
+}

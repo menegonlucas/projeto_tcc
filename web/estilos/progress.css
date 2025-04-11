@@ -1,0 +1,68 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--c6);
+    font-family: 'Poppins', sans-serif;
+    --c1: #22333B;
+    --c4: #c6ad8f;
+    --c5: #FAF9F6;
+    --c6: #F2E8CF;
+    --c7: #F2D0A4;
+}
+
+header {
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--c1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    color: var(--c5);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    margin-top: 15px;
+}
+
+.content {
+    margin-top: 120px;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: var(--c5);
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    color: var(--c1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.progress-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.progress-stats p {
+    font-size: 16px;
+    color: var(--c1);
+}
+
+.progress-stats p strong {
+    font-weight: 600;
+}
