@@ -22,19 +22,59 @@
     </header>
 
     <main>
-        <!-- Seção de Adicionar Livros -->
-        <section id="add-book-section">
-            <h2>Adicionar Livro</h2>
-            <form id="add-book-form">
-                <label for="book-search">Buscar Livro:</label>
-                <input type="text" id="book-search" name="search" placeholder="Digite o título ou autor do livro"
-                    required>
-                <button type="submit">Buscar e Adicionar</button>
-            </form>
-            <div id="search-results">
-                <!-- Resultados da busca serão carregados dinamicamente aqui -->
-            </div>
-        </section>
+        <!-- Container para as seções lado a lado -->
+        <div id="top-sections">
+            <!-- Seção de Adicionar Livros -->
+            <section id="add-book-section">
+                <h2>Adicionar Livro</h2>
+                <form id="add-book-form">
+                    <label for="book-search">Buscar Livro:</label>
+                    <input type="text" id="book-search" name="search" placeholder="Digite o título ou autor do livro" required>
+                    <button type="submit">Buscar e Adicionar</button>
+                </form>
+                <div id="search-results">
+                    <!-- Resultados da busca serão carregados dinamicamente aqui -->
+                </div>
+            </section>
+
+            <!-- Seção de Registro de Leitura -->
+            <section id="reading-progress-section">
+                <h2>Registrar Progresso de Leitura</h2>
+                <form id="reading-progress-form">
+                    <label for="book-select">Selecione o Livro:</label>
+                    <select id="book-select" name="bookId" required>
+                        <!-- Opções serão carregadas dinamicamente -->
+                    </select>
+
+                    <label for="reading-status">Status de Leitura:</label>
+                    <select id="reading-status" name="status" required>
+                        <option value="lido">Lido</option>
+                        <option value="lendo">Lendo</option>
+                        <option value="relendo">Relendo</option>
+                        <option value="abandonado">Abandonado</option>
+                        <option value="quero-ler">Quero Ler</option>
+                    </select>
+
+                    <label for="total-pages">Total de Páginas:</label>
+                    <input type="number" id="total-pages" name="totalPages" placeholder="Digite o total de páginas" required>
+
+                    <label for="current-page">Página Atual:</label>
+                    <input type="number" id="current-page" name="currentPage" placeholder="Digite a página atual" required>
+
+                    <label for="comment">Comentário:</label>
+                    <textarea id="comment" name="comment" placeholder="Adicione um comentário sobre sua leitura"></textarea>
+
+                    <button type="submit">Registrar Progresso</button>
+                </form>
+
+                <div id="progress-bar-container">
+                    <div id="progress-bar">
+                        <div id="progress-fill"></div>
+                    </div>
+                    <p id="progress-percentage">0%</p>
+                </div>
+            </section>
+        </div>
 
         <!-- Seção de Todos os Livros -->
         <section id="all-books-section">
@@ -51,45 +91,7 @@
                 <!-- Os livros serão carregados dinamicamente aqui -->
             </div>
         </section>
-
-        <!-- Seção de Registro de Leitura -->
-        <section id="reading-progress-section">
-            <h2>Registrar Progresso de Leitura</h2>
-            <form id="reading-progress-form">
-                <label for="book-select">Selecione o Livro:</label>
-                <select id="book-select" name="bookId" required>
-                    <!-- Opções serão carregadas dinamicamente -->
-                </select>
-
-                <label for="reading-status">Status de Leitura:</label>
-                <select id="reading-status" name="status" required>
-                    <option value="lido">Lido</option>
-                    <option value="lendo">Lendo</option>
-                    <option value="relendo">Relendo</option>
-                    <option value="abandonado">Abandonado</option>
-                    <option value="quero-ler">Quero Ler</option>
-                </select>
-
-                <label for="total-pages">Total de Páginas:</label>
-                <input type="number" id="total-pages" name="totalPages" placeholder="Digite o total de páginas"
-                    required>
-
-                <label for="current-page">Página Atual:</label>
-                <input type="number" id="current-page" name="currentPage" placeholder="Digite a página atual" required>
-
-                <label for="comment">Comentário:</label>
-                <textarea id="comment" name="comment" placeholder="Adicione um comentário sobre sua leitura"></textarea>
-
-                <button type="submit">Registrar Progresso</button>
-            </form>
-
-            <div id="progress-bar-container">
-                <div id="progress-bar">
-                    <div id="progress-fill"></div>
-                </div>
-                <p id="progress-percentage">0%</p>
-            </div>
-        </section>
+    </main>
 </body>
 
 </html>
