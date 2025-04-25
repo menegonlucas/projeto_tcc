@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="../estilos/profile.css">
+    <script defer src="../scripts/profile.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Palavraria</div>
+        <div class="nav-buttons">
+            <a href="../html/index.html">
+                <button>
+                    <img class="icon" src="../imgs/Home.png" alt="Página Inicial"> Início
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção de Adicionar Livros -->
+        <section id="add-book-section">
+            <h2>Adicionar Livro</h2>
+            <form id="add-book-form">
+                <label for="book-search">Buscar Livro:</label>
+                <input type="text" id="book-search" name="search" placeholder="Digite o título ou autor do livro"
+                    required>
+                <button type="submit">Buscar e Adicionar</button>
+            </form>
+            <div id="search-results">
+                <!-- Resultados da busca serão carregados dinamicamente aqui -->
+            </div>
+        </section>
+
+        <!-- Seção de Todos os Livros -->
+        <section id="all-books-section">
+            <h2>Meus Livros</h2>
+            <div id="filter-options">
+                <button data-filter="todos">Todos</button>
+                <button data-filter="lido">Lido</button>
+                <button data-filter="lendo">Lendo</button>
+                <button data-filter="relendo">Relendo</button>
+                <button data-filter="quero-ler">Quero Ler</button>
+                <button data-filter="abandonado">Abandonado</button>
+            </div>
+            <div id="books-container">
+                <!-- Os livros serão carregados dinamicamente aqui -->
+            </div>
+        </section>
+
+        <!-- Seção de Registro de Leitura -->
+        <section id="reading-progress-section">
+            <h2>Registrar Progresso de Leitura</h2>
+            <form id="reading-progress-form">
+                <label for="book-select">Selecione o Livro:</label>
+                <select id="book-select" name="bookId" required>
+                    <!-- Opções serão carregadas dinamicamente -->
+                </select>
+
+                <label for="reading-status">Status de Leitura:</label>
+                <select id="reading-status" name="status" required>
+                    <option value="lido">Lido</option>
+                    <option value="lendo">Lendo</option>
+                    <option value="relendo">Relendo</option>
+                    <option value="abandonado">Abandonado</option>
+                    <option value="quero-ler">Quero Ler</option>
+                </select>
+
+                <label for="total-pages">Total de Páginas:</label>
+                <input type="number" id="total-pages" name="totalPages" placeholder="Digite o total de páginas"
+                    required>
+
+                <label for="current-page">Página Atual:</label>
+                <input type="number" id="current-page" name="currentPage" placeholder="Digite a página atual" required>
+
+                <label for="comment">Comentário:</label>
+                <textarea id="comment" name="comment" placeholder="Adicione um comentário sobre sua leitura"></textarea>
+
+                <button type="submit">Registrar Progresso</button>
+            </form>
+
+            <div id="progress-bar-container">
+                <div id="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+                <p id="progress-percentage">0%</p>
+            </div>
+        </section>
+</body>
+
+</html>
