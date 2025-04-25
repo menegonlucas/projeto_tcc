@@ -22,7 +22,7 @@ CREATE TABLE `Usuario` (
     `nome` VARCHAR(100) NOT NULL,
     `email` VARCHAR(100) NOT NULL,
     `senha` VARCHAR(255) NOT NULL,
-    `tipo` ENUM('ADMIN', 'BIBLIOTECARIO', 'COMUM') NOT NULL DEFAULT 'COMUM',
+    `tipo` ENUM('ADMIN', 'COMUM') NOT NULL DEFAULT 'COMUM',
     `dataCadastro` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
 
     UNIQUE INDEX `Usuario_email_key`(`email`),
@@ -34,9 +34,11 @@ CREATE TABLE `Registro` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `livroId` INTEGER NOT NULL,
     `usuarioId` INTEGER NOT NULL,
-    `tipo` ENUM('CADASTRO', 'EMPRESTIMO', 'DEVOLUCAO', 'RESERVA', 'ATUALIZACAO') NOT NULL,
-    `data` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
-    `observacao` VARCHAR(255) NULL,
+    `comentario` TEXT NULL,
+    `statusLeitura` ENUM('LIDO', 'LENDO', 'RELENDO', 'QUERO_LER', 'ABANDONADO') NOT NULL,
+    `totalPaginas` INTEGER NULL,
+    `paginaAtual` INTEGER NULL,
+    `dataAtualizacao` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
 
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
