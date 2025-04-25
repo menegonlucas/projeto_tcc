@@ -1,18 +1,14 @@
 /* Importação da fonte */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* Variáveis de cores */
 :root {
     --c1: #22333B;
-    /* Cor principal (escura) */
     --c2: #c6ad8f;
-    /* Cor secundária */
     --c3: #FAF9F6;
-    /* Fundo claro */
     --c4: #F2E8CF;
-    /* Fundo geral */
     --c5: #F2D0A4;
-    /* Destaque */
+    --c6: #E0C097;
 }
 
 /* Reset básico */
@@ -43,41 +39,13 @@ header {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
+header .logo img {
+    width: 120px;
+    height: auto;
+    display: block;
 }
 
-header .nav-buttons a {
-    text-decoration: none;
-    margin-left: 10px;
-}
-
-header .nav-buttons button {
-    background-color: var(--c3);
-    color: var(--c1);
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: background-color 0.3s ease;
-}
-
-header .nav-buttons button:hover {
-    background-color: var(--c5);
-    color: var(--c3);
-}
-
-.icon {
-    width: 20px;
-    height: 20px;
-}
-
-/* Conteúdo principal */
+/* Layout principal */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -86,59 +54,33 @@ main {
     gap: 30px;
 }
 
-/* Seções */
-section {
+/* Container para as seções lado a lado */
+#top-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Estilo para as seções lado a lado */
+#add-book-section,
+#reading-progress-section {
+    flex: 1;
     background-color: var(--c3);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
-    font-size: 22px;
-    color: var(--c1);
-    margin-bottom: 15px;
-    border-bottom: 2px solid var(--c1);
-    padding-bottom: 5px;
+/* Seção "Meus Livros" ocupa toda a largura */
+#all-books-section {
+    background-color: var(--c3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
-/* Formulários */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-form label {
-    font-weight: bold;
-    color: var(--c1);
-}
-
-form input,
-form select {
-    padding: 10px;
-    border: 1px solid var(--c2);
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-form button {
-    background-color: var(--c1);
-    color: var(--c3);
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s ease-in-out;
-}
-
-form button:hover {
-    background-color: var(--c2);
-    color: var(--c3);
-}
-
-/* Seção de Meus Livros */
+/* Botões de filtro */
 #filter-options {
     display: flex;
     gap: 10px;
@@ -152,59 +94,18 @@ form button:hover {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s ease-in-out;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #filter-options button:hover {
-    background-color: var(--c2);
+    background-color: var(--c5);
+    transform: scale(1.05);
+}
+
+#filter-options button.active {
+    background-color: var(--c5);
     color: var(--c1);
-}
-
-#books-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.book {
-    background-color: var(--c3);
-    border: 1px solid var(--c2);
-    border-radius: 10px;
-    padding: 15px;
-    width: calc(50% - 10px);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.book h3 {
-    font-size: 18px;
-    color: var(--c1);
-    margin-bottom: 10px;
-}
-
-.book p {
-    font-size: 14px;
-    color: var(--c1);
-    margin-bottom: 5px;
-}
-
-.book p:last-child {
-    font-weight: bold;
-    color: var(--c2);
-}
-
-/* Seção de Registro de Leitura */
-#reading-progress-section form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-#reading-progress-section select {
-    padding: 10px;
-    border: 1px solid var(--c2);
-    border-radius: 5px;
-    font-size: 16px;
 }
 
 /* Barra de Progresso */
@@ -222,7 +123,6 @@ form button:hover {
     border-radius: 10px;
     margin: 10px auto;
     overflow: hidden;
-    position: relative;
 }
 
 #progress-fill {
@@ -236,4 +136,56 @@ form button:hover {
     font-size: 16px;
     color: var(--c1);
     font-weight: bold;
+}
+
+/* Estilo para caixas de texto, áreas de texto e botões de seleção */
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--c2);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--c3);
+    color: var(--c1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Efeito ao focar nos campos */
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: var(--c5);
+    box-shadow: 0px 0px 8px var(--c5);
+    outline: none;
+}
+
+/* Estilo para áreas de texto (textarea) */
+form textarea {
+    resize: vertical;
+    /* Permite redimensionar apenas na vertical */
+    min-height: 100px;
+    /* Altura mínima */
+}
+
+/* Botões */
+form button {
+    background-color: var(--c1);
+    color: var(--c3);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Efeito ao passar o mouse nos botões */
+form button:hover {
+    background-color: var(--c5);
+    transform: scale(1.05);
 }

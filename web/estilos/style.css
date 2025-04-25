@@ -40,11 +40,20 @@ header {
 
 .nav-buttons {
     text-decoration: none;
+    color: var(--c3);
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
 }
 
-header .logo {
-    font-size: 28px;
-    font-weight: bold;
+header .logo img {
+    width: 120px;
+    /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    display: block;
+    /* Garante que a imagem seja tratada como um bloco */
 }
 
 .icon {
@@ -131,5 +140,45 @@ header .nav-buttons button:hover {
 .book-info p,
 .activity-info p {
     margin: 5px 0;
+    color: var(--c1);
+}
+
+#recent-comments {
+    background-color: var(--c3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#recent-comments h2 {
+    font-size: 22px;
+    color: var(--c1);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--c1);
+    padding-bottom: 5px;
+}
+
+#comments-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comment-card {
+    background-color: var(--c4);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment-card h3 {
+    font-size: 18px;
+    color: var(--c1);
+    margin-bottom: 10px;
+}
+
+.comment-card p {
+    font-size: 14px;
     color: var(--c1);
 }
