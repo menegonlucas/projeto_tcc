@@ -17,12 +17,12 @@ Integrantes: Emily Goulart, Gabriel Araújo, Henrico Ramalho e Lucas Menegon.
 - [x] Apresentar a **proposta inicial**
 - [ ] Criar o cronograma: **[Gráfico de Gantt](https://wellifabio.github.io/gantt/)**
 - [x] Criar repositório no **GitHub** e adicionar os integrantes como colaboradores
-- [ ] Criar o **protótipo funcional**
+- [x] Criar o **protótipo funcional**
 - [ ] Levantar os **requisitos funcionais** com **Diagramas de Casos de Uso (DCU)**
 - [ ] Modelar o banco de dados (**MER** e **DER**)
 - [ ] Criar o **Diagrama de Classes (DC)** do Back-End
-- [ ] Iniciar o desenvolvimento do **Banco de Dados**
-- [ ] Iniciar o desenvolvimento do **Back-End**
+- [x] Iniciar o desenvolvimento do **Banco de Dados**
+- [x] Iniciar o desenvolvimento do **Back-End**
 - [x] Iniciar o desenvolvimento do **Front-End**
 - [ ] Iniciar o desenvolvimento da versão **Mobile**
     (Layout feito pelo Figma incluso).
@@ -31,10 +31,10 @@ Integrantes: Emily Goulart, Gabriel Araújo, Henrico Ramalho e Lucas Menegon.
 
 ## 🚀 Backlog da Sprint Atual
 
-- [ ] Criar repositório no **GitHub** e adicionar os integrantes como colaboradores  
-  - [ ] Enviar o link pelo seguinte **[Formulário](https://docs.google.com/forms/d/e/1FAIpQLSdLh0XsKBlFx1N8lw6gY3bZ6p7Ex01N39sIdodaG4Ka-NJgtA/viewform?usp=dialog)**
+- [x] Criar repositório no **GitHub** e adicionar os integrantes como colaboradores  
+  - [x] Enviar o link pelo seguinte **[Formulário](https://docs.google.com/forms/d/e/1FAIpQLSdLh0XsKBlFx1N8lw6gY3bZ6p7Ex01N39sIdodaG4Ka-NJgtA/viewform?usp=dialog)**
 
-- [ ] Criar o **protótipo funcional inicial**
+- [x] Criar o **protótipo funcional inicial**
 
 - [ ] Levantar os **requisitos funcionais**. Exemplo:
   - `[FR001]` Descrição do requisito  
@@ -54,4 +54,5 @@ Integrantes: Emily Goulart, Gabriel Araújo, Henrico Ramalho e Lucas Menegon.
 
 ## Apresentações
 
-> Datas: 
+> Datas: 25/04
+| Apresentamos os passos iniciais do projeto, bem como o desenvolvimento do Front-end (estética do site); também iniciamos o Back-end
