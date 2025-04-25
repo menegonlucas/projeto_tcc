@@ -54,5 +54,5 @@ Integrantes: Emily Goulart, Gabriel Araújo, Henrico Ramalho e Lucas Menegon.
 
 ## Apresentações
 
-> Datas: 25/04
+> Datas: 25/04/25
 | Apresentamos os passos iniciais do projeto, bem como o desenvolvimento do Front-end (estética do site); também iniciamos o Back-end
