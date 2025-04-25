@@ -40,11 +40,20 @@ header {
 
 .nav-buttons {
     text-decoration: none;
+    color: var(--c3);
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
 }
 
-header .logo {
-    font-size: 28px;
-    font-weight: bold;
+header .logo img {
+    width: 120px;
+    /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    display: block;
+    /* Garante que a imagem seja tratada como um bloco */
 }
 
 .icon {

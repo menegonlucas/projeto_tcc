@@ -11,26 +11,21 @@
 
 <body>
     <header>
-        <div class="logo">Palavraria</div>
-        <div class="nav-buttons">
+        <div class="logo">
             <a href="../html/index.html">
-                <button>
-                    <img class="icon" src="../imgs/Home.png" alt="Página Inicial"> Início
-                </button>
+                <img src="../imgs/ChatGPT Image 25 de abr. de 2025, 11_22_46.png" alt="Logo Palavraria">
             </a>
         </div>
     </header>
 
     <main>
-        <!-- Container para as seções lado a lado -->
         <div id="top-sections">
             <!-- Seção de Adicionar Livros -->
             <section id="add-book-section">
                 <h2>Adicionar Livro</h2>
                 <form id="add-book-form">
-                    <label for="book-search">Buscar Livro:</label>
-                    <input type="text" id="book-search" name="search" placeholder="Digite o título ou autor do livro" required>
-                    <button type="submit">Buscar e Adicionar</button>
+                    <input type="text" id="book-search" name="search" placeholder="Buscar o livro" required>
+                    <button type="submit">Buscar e adicionar</button>
                 </form>
                 <div id="search-results">
                     <!-- Resultados da busca serão carregados dinamicamente aqui -->
@@ -56,13 +51,16 @@
                     </select>
 
                     <label for="total-pages">Total de Páginas:</label>
-                    <input type="number" id="total-pages" name="totalPages" placeholder="Digite o total de páginas" required>
+                    <input type="number" id="total-pages" name="totalPages" placeholder="Digite o total de páginas"
+                        required>
 
                     <label for="current-page">Página Atual:</label>
-                    <input type="number" id="current-page" name="currentPage" placeholder="Digite a página atual" required>
+                    <input type="number" id="current-page" name="currentPage" placeholder="Digite a página atual"
+                        required>
 
                     <label for="comment">Comentário:</label>
-                    <textarea id="comment" name="comment" placeholder="Adicione um comentário sobre sua leitura"></textarea>
+                    <textarea id="comment" name="comment"
+                        placeholder="Adicione um comentário sobre sua leitura"></textarea>
 
                     <button type="submit">Registrar Progresso</button>
                 </form>
