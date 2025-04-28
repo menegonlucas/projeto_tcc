@@ -1,7 +1,5 @@
-/* Importação da fonte */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
 
-/* Variáveis de cores */
 :root {
     --c1: #22333B;
     --c2: #c6ad8f;
@@ -11,7 +9,6 @@
     --c6: #E0C097;
 }
 
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -19,14 +16,13 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Cal Sans', sans-serif;
     background-color: var(--c4);
     color: var(--c1);
     line-height: 1.6;
     padding: 20px;
 }
 
-/* Header */
 header {
     background-color: var(--c1);
     color: var(--c3);
@@ -45,7 +41,6 @@ header .logo img {
     display: block;
 }
 
-/* Layout principal */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -54,14 +49,12 @@ main {
     gap: 30px;
 }
 
-/* Container para as seções lado a lado */
 #top-sections {
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
 
-/* Estilo para as seções lado a lado */
 #add-book-section,
 #reading-progress-section {
     flex: 1;
@@ -71,7 +64,6 @@ main {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Seção "Meus Livros" ocupa toda a largura */
 #all-books-section {
     background-color: var(--c3);
     padding: 20px;
@@ -80,7 +72,6 @@ main {
     margin-top: 20px;
 }
 
-/* Botões de filtro */
 #filter-options {
     display: flex;
     gap: 10px;
@@ -108,7 +99,6 @@ main {
     color: var(--c1);
 }
 
-/* Barra de Progresso */
 #progress-bar-container {
     margin-top: 20px;
     text-align: center;
@@ -138,7 +128,6 @@ main {
     font-weight: bold;
 }
 
-/* Estilo para caixas de texto, áreas de texto e botões de seleção */
 form input,
 form select,
 form textarea {
@@ -150,10 +139,9 @@ form textarea {
     background-color: var(--c3);
     color: var(--c1);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Cal Sans', sans-serif;
 }
 
-/* Efeito ao focar nos campos */
 form input:focus,
 form select:focus,
 form textarea:focus {
@@ -162,15 +150,11 @@ form textarea:focus {
     outline: none;
 }
 
-/* Estilo para áreas de texto (textarea) */
 form textarea {
     resize: vertical;
-    /* Permite redimensionar apenas na vertical */
     min-height: 100px;
-    /* Altura mínima */
 }
 
-/* Botões */
 form button {
     background-color: var(--c1);
     color: var(--c3);
@@ -181,10 +165,9 @@ form button {
     font-weight: bold;
     font-size: 16px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Cal Sans', sans-serif;
 }
 
-/* Efeito ao passar o mouse nos botões */
 form button:hover {
     background-color: var(--c5);
     transform: scale(1.05);
