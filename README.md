@@ -89,4 +89,3 @@ As principais ferramentas e tecnologias utilizadas no projeto são:
   - Início do **Back-end**  
 =======
   - Início do **Back-end**  
->>>>>>> 4e2954371f520a840f880d2adeb5a71fa192d573
