@@ -31,7 +31,7 @@ As principais ferramentas e tecnologias utilizadas no projeto são:
 <img src="https://www.cdnlogo.com/logos/x/32/xampp.svg" alt="Xampp" width="50">
 <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="JavaScript" width="50">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="HTML5" width="50">
-<img src="https://images.seeklogo.com/logo-png/18/1/css3-logo-png_seeklogo-186678.png" alt="CSS3" width="50">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png" alt="CSS" width="50">
 <img src="https://user-images.githubusercontent.com/6686410/31217465-6adbbd18-a98d-11e7-9371-26d578182e9d.png" alt="Insomnia" width="50">
 <img src="https://cdn.creazilla.com/icons/3253836/google-developers-icon-sm.png" alt="API de Livros" width="50">
 
@@ -85,4 +85,8 @@ As principais ferramentas e tecnologias utilizadas no projeto são:
 ### **Datas**
 - **25/04**: Apresentação inicial do projeto, incluindo:  
   - Desenvolvimento do **Front-end** (estética do site)  
+<<<<<<< HEAD
   - Início do **Back-end**  
+=======
+  - Início do **Back-end**  
+>>>>>>> 4e2954371f520a840f880d2adeb5a71fa192d573
