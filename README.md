@@ -38,6 +38,7 @@ As principais ferramentas e tecnologias utilizadas no projeto são:
 
 ---
 
+<<<<<<< HEAD
 ## 📌 Aula 07 – Reunião Mensal
 
 ### **Backlog Geral do Projeto**
@@ -55,15 +56,38 @@ As principais ferramentas e tecnologias utilizadas no projeto são:
 - [x] Iniciar o desenvolvimento do **Back-End**  
 - [x] Iniciar o desenvolvimento do **Front-End**  
 - [x] Iniciar o desenvolvimento da versão **Mobile** (Layout feito pelo Figma incluso).  
+=======
+- [x] Escolher a metodologia: **SCRUM**, **KANBAN**, **XP** ou outras
+- [x] Definir **papéis e responsabilidades**
+- [x] Modelar o negócio com o **[Canvas](https://wellifabio.github.io/canvas/)**
+- [x] Apresentar a **proposta inicial**
+- [ ] Criar o cronograma: **[Gráfico de Gantt](https://wellifabio.github.io/gantt/)**
+- [x] Criar repositório no **GitHub** e adicionar os integrantes como colaboradores
+- [x] Criar o **protótipo funcional**
+- [ ] Levantar os **requisitos funcionais** com **Diagramas de Casos de Uso (DCU)**
+- [ ] Modelar o banco de dados (**MER** e **DER**)
+- [ ] Criar o **Diagrama de Classes (DC)** do Back-End
+- [x] Iniciar o desenvolvimento do **Banco de Dados**
+- [x] Iniciar o desenvolvimento do **Back-End**
+- [x] Iniciar o desenvolvimento do **Front-End**
+- [ ] Iniciar o desenvolvimento da versão **Mobile**
+    (Layout feito pelo Figma incluso).
+>>>>>>> 1a017e5d6ca2c7ec70b9cbe7e80cd3ad40ed9622
 
 ---
 
 ## 🚀 Backlog da Sprint Atual
 
 - [x] Criar repositório no **GitHub** e adicionar os integrantes como colaboradores  
+<<<<<<< HEAD
   - [x] Enviar o link pelo seguinte **[Formulário](https://docs.google.com/forms/d/e/1FAIpQLSdLh0XsKBlFx1N8lw6gY3bZ6p7Ex01N39sIdodaG4Ka-NJgtA/viewform?usp=dialog)**  
 
 - [x] Criar o **protótipo funcional inicial**  
+=======
+  - [x] Enviar o link pelo seguinte **[Formulário](https://docs.google.com/forms/d/e/1FAIpQLSdLh0XsKBlFx1N8lw6gY3bZ6p7Ex01N39sIdodaG4Ka-NJgtA/viewform?usp=dialog)**
+
+- [x] Criar o **protótipo funcional inicial**
+>>>>>>> 1a017e5d6ca2c7ec70b9cbe7e80cd3ad40ed9622
 
 - [ ] Levantar os **requisitos funcionais**. Exemplo:  
   - `[FR001]` Descrição do requisito  
@@ -90,3 +114,8 @@ As principais ferramentas e tecnologias utilizadas no projeto são:
 
 ---
 
+<<<<<<< HEAD
+=======
+> Datas: 25/04/25
+| Apresentamos os passos iniciais do projeto, bem como o desenvolvimento do Front-end (estética do site); também iniciamos o Back-end
+>>>>>>> 1a017e5d6ca2c7ec70b9cbe7e80cd3ad40ed9622
