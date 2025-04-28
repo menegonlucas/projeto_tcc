@@ -85,7 +85,5 @@ As principais ferramentas e tecnologias utilizadas no projeto são:
 ### **Datas**
 - **25/04**: Apresentação inicial do projeto, incluindo:  
   - Desenvolvimento do **Front-end** (estética do site)  
-<<<<<<< HEAD
   - Início do **Back-end**  
-=======
   - Início do **Back-end**  
