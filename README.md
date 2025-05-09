@@ -1,8 +1,8 @@
-# Projeto Final de Técnico em Desenvolvimento de Sistemas
+# <span style="color: lightblue;">Projeto Final de Técnico em Desenvolvimento de Sistemas</span>
 
 ---
 
-### **Integrantes do projeto**
+### <span style="color: lightblue;">**Integrantes do projeto**</span>
 - Emily Goulart  
 - Gabriel Araújo  
 - Henrico Ramalho  
@@ -10,12 +10,12 @@
 
 ---
 
-### **Descrição do repositório**
+### <span style="color: lightblue;">**Descrição do repositório**</span>
 Este repositório é dedicado ao desenvolvimento do **Front-end** e **Back-end** do projeto. As alterações são enviadas frequentemente para garantir a evolução contínua e o salvamento seguro do TCC.
 
 ---
 
-## 🛠️ Quais ferramentas estamos utilizando no projeto?
+## <span style="color: lightblue;">🛠️ Quais ferramentas estamos utilizando no projeto?</span>
 As principais ferramentas e tecnologias utilizadas no projeto são:
 
 - **Prisma**  
@@ -38,9 +38,9 @@ As principais ferramentas e tecnologias utilizadas no projeto são:
 
 ---
 
-## 📌 Aula 07 – Reunião Mensal
+## <span style="color: lightblue;">📌 Aula 07 – Reunião Mensal</span>
 
-### **Backlog Geral do Projeto**
+### <span style="color: lightblue;">**Backlog Geral do Projeto**</span>
 - [x] Escolher a metodologia: **SCRUM**, **KANBAN**, **XP** ou outras  
 - [x] Definir **papéis e responsabilidades**  
 - [x] Modelar o negócio com o **[Canvas](https://wellifabio.github.io/canvas/)**  
@@ -58,7 +58,7 @@ As principais ferramentas e tecnologias utilizadas no projeto são:
 
 ---
 
-## 🚀 Backlog da Sprint Atual
+## <span style="color: lightblue;">🚀 Backlog da Sprint Atual</span>
 
 - [x] Criar repositório no **GitHub** e adicionar os integrantes como colaboradores  
   - [x] Enviar o link pelo seguinte **[Formulário](https://docs.google.com/forms/d/e/1FAIpQLSdLh0XsKBlFx1N8lw6gY3bZ6p7Ex01N39sIdodaG4Ka-NJgtA/viewform?usp=dialog)**  
@@ -81,10 +81,9 @@ As principais ferramentas e tecnologias utilizadas no projeto são:
 
 ---
 
-## 📅 Apresentações
+## <span style="color: lightblue;">📅 Apresentações</span>
 
-### **Datas**
+### <span style="color: lightblue;">**Datas**</span>
 - **25/04**: Apresentação inicial do projeto, incluindo:  
   - Desenvolvimento do **Front-end** (estética do site)  
   - Início do **Back-end**
-
