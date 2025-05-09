@@ -11,7 +11,7 @@
 ---
 
 ### **Descrição do repositório**
-Este repositório é dedicado ao desenvolvimento do **Front-end** e **Back-end** do projeto. As alterações são enviadas frequentemente para garantir a evolução contínua.
+Este repositório é dedicado ao desenvolvimento do **Front-end** e **Back-end** do projeto. As alterações são enviadas frequentemente para garantir a evolução contínua e o salvamento seguro do TCC.
 
 ---
 
@@ -19,12 +19,13 @@ Este repositório é dedicado ao desenvolvimento do **Front-end** e **Back-end**
 As principais ferramentas e tecnologias utilizadas no projeto são:
 
 - **Prisma**  
-- **Xampp**  
+- **Xampp** 
 - **JavaScript**  
 - **HTML**  
 - **CSS**  
 - **Insomnia**  
 - **API de Livros**  
+- **Node.js**
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" alt="VSCODE" width="50">
 <img src="https://icons.veryicon.com/png/o/business/vscode-program-item-icon/prisma.png" alt="Prisma" width="50">
@@ -53,7 +54,7 @@ As principais ferramentas e tecnologias utilizadas no projeto são:
 - [x] Iniciar o desenvolvimento do **Banco de Dados**  
 - [x] Iniciar o desenvolvimento do **Back-End**  
 - [x] Iniciar o desenvolvimento do **Front-End**  
-- [ ] Iniciar o desenvolvimento da versão **Mobile** (Layout feito pelo Figma incluso).
+- [x] Iniciar o desenvolvimento da versão **Mobile** (Layout feito pelo Figma incluso).
 
 ---
 
@@ -85,5 +86,5 @@ As principais ferramentas e tecnologias utilizadas no projeto são:
 ### **Datas**
 - **25/04**: Apresentação inicial do projeto, incluindo:  
   - Desenvolvimento do **Front-end** (estética do site)  
-  - Início do **Back-end**  
-  - Início do **Back-end**  
+  - Início do **Back-end**
+
