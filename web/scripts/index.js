@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const bookCard = document.createElement("div");
                 bookCard.classList.add("book-card");
                 bookCard.innerHTML = `
+                    <img src="${book.capa}" alt="Capa do Livro">
                     <h3>${book.titulo}</h3>
                     <p><strong>Autor:</strong> ${book.autor}</p>
                     <p><strong>Gênero:</strong> ${book.genero}</p>

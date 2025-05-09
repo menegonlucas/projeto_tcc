@@ -70,30 +70,21 @@ document.addEventListener("DOMContentLoaded", () => {
         const comment = document.getElementById("comment").value;
 
         try {
+            // Atualiza o progresso no backend
             await fetch(`http://localhost:3000/api/books/${bookId}/progress`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ status, totalPages, currentPage, comment }),
             });
 
+            // Atualiza a barra de progresso com os valores enviados
+            const progress = totalPages > 0 ? Math.min((currentPage / totalPages) * 100, 100) : 0;
+            updateProgressBar(progress);
+
             readingProgressForm.reset();
-            updateProgressBar(0); // Reseta a barra de progresso
             loadBooks(); // Recarrega os livros
         } catch (error) {
             console.error("Erro ao registrar progresso:", error);
-        }
-    });
-
-    // Função para atualizar a barra de progresso
-    readingProgressForm.addEventListener("input", () => {
-        const totalPages = parseInt(document.getElementById("total-pages").value) || 0;
-        const currentPage = parseInt(document.getElementById("current-page").value) || 0;
-
-        if (totalPages > 0 && currentPage >= 0) {
-            const progress = Math.min((currentPage / totalPages) * 100, 100); // Limita a 100%
-            updateProgressBar(progress);
-        } else {
-            updateProgressBar(0);
         }
     });
 

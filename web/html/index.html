@@ -1,33 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial</title>
+    <title>Página Inicial | Palavraria</title>
     <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="icon" href="../imgs/ChatGPT Image 25 de abr. de 2025, 11_22_46.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
     </style>
-    <link rel="icon" href="../imgs/ChatGPT Image 25 de abr. de 2025, 11_22_46.png">
 </head>
 
 <body>
     <header id="main-header">
         <div class="logo">
-            <a href="../html/index.html">
+            <a href="index.html">
                 <img src="../imgs/ChatGPT Image 25 de abr. de 2025, 11_22_46.png" alt="Logo Palavraria">
             </a>
         </div>
+
         <div class="profile-button">
-            <a href="../html/profile.html">
+            <a href="profile.html">
                 <button>
-                    <img class="icon" src="../imgs/user.png" alt="Perfil"></button>
+                    <img class="icon" src="../imgs/user.png" alt="Perfil">
+                </button>
             </a>
         </div>
     </header>
 
     <main>
+        <section class="content">
+            <div class="recommendations">
+                <h2>Recomendações</h2>
+                <!-- Cards de recomendação serão preenchidos aqui -->
+            </div>
+
+            <div class="recent-activities">
+                <h2>Atividades Recentes</h2>
+                <!-- Cards de atividades recentes serão preenchidos aqui -->
+            </div>
+        </section>
+
         <section id="books-section">
             <h2>Livros Disponíveis</h2>
             <div id="books-container">
@@ -35,11 +49,8 @@
             </div>
         </section>
     </main>
-    <script src="../scripts/index.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
-    </style>
-</body>
 
+    <script src="../scripts/index.js"></script>
+</body>
 
 </html>
