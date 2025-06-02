@@ -1,65 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Início | Palavraria</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Montserrat:wght@400;600&display=swap"
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Início | Palavraria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Montserrat:wght@400;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../web/styles/home.css" />
+  <link rel="stylesheet" href="../web/styles/home.css" />
 </head>
-
 <body>
-    <header>
-        <a href="home.html" class="brand" title="Início">
-            <img src="./img/logo.png" alt="Logo Palavraria" class="brand-logo">
-        </a>
+  <header class="main-header">
+    <div class="header-container">
+      <a href="home.html" class="brand" title="Início">
+        <img src="./img/logo.png" alt="Logo Palavraria" class="brand-logo">
+      </a>
 
-        <form class="group search-bar" autocomplete="off">
-            <svg class="search-icon" viewBox="0 0 24 24">
-                <circle cx="11" cy="11" r="7" stroke="#bdbecb" stroke-width="2" fill="none" />
-                <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="#bdbecb" stroke-width="2" stroke-linecap="round" />
-            </svg>
-            <input class="input" type="text" placeholder="Pesquisar..." aria-label="Pesquisar">
-        </form>
+      <form class="group search-bar" autocomplete="off">
+        <svg class="search-icon" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7" stroke="#bdbecb" stroke-width="2" fill="none"></circle>
+          <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="#bdbecb" stroke-width="2" stroke-linecap="round"></line>
+        </svg>
+        <input class="input" type="text" placeholder="Pesquisar..." aria-label="Pesquisar">
+      </form>
 
-        <a href="profile.html" class="profile-link" title="Perfil do usuário">
-            <svg class="profile-icon" viewBox="0 0 32 32" fill="none">
-                <circle cx="16" cy="12" r="7" stroke="#22333B" stroke-width="2" fill="#fff" />
-                <ellipse cx="16" cy="25" rx="10" ry="6" stroke="#22333B" stroke-width="2" fill="#fff" />
-            </svg>
-        </a>
-    </header>
+      <a href="profile.html" class="profile-link" title="Perfil do usuário">
+        <svg class="profile-icon" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="12" r="7" stroke="#22333B" stroke-width="2" fill="#fff"></circle>
+          <ellipse cx="16" cy="25" rx="10" ry="6" stroke="#22333B" stroke-width="2" fill="#fff"></ellipse>
+        </svg>
+      </a>
+    </div>
+  </header>
 
-    <main>
-        <section class="dashboard-sections">
-            <div class="dashboard-card atividades">
-                <h2>Atividades Recentes</h2>
-                <ul id="atividades-list">
-                    <li>Carregando...</li>
-                </ul>
-            </div>
+  <main>
+    <section class="dashboard-sections">
+      <div class="dashboard-card atividades">
+        <h2>Atividades Recentes</h2>
+        <ul id="atividades-list">
+          <li>Carregando...</li>
+        </ul>
+      </div>
 
-            <div class="dashboard-card sugestoes">
-                <h2>Sugestões</h2>
-                <ul id="sugestoes-list">
-                    <li>Carregando...</li>
-                </ul>
-            </div>
-        </section>
+      <div class="dashboard-card sugestoes">
+        <h2>Sugestões</h2>
+        <ul id="sugestoes-list">
+          <li>Carregando...</li>
+        </ul>
+      </div>
+    </section>
 
-        <section class="dashboard-sections">
-            <div class="dashboard-card metas">
-                <h2>🎯 Metas</h2>
-                <ul id="metas-list">
-                    <li>Carregando...</li>
-                </ul>
-            </div>
-        </section>
-    </main>
+    <section class="dashboard-sections">
+      <div class="dashboard-card metas">
+        <h2>Metas</h2>
+        <ul id="metas-list">
+          <li>Carregando...</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 </body>
-
 </html>

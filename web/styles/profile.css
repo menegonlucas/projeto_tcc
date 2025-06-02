@@ -1,24 +1,20 @@
-/* Variáveis de cor baseadas na paleta fornecida */
+/* === VARIÁVEIS DE TEMA === */
 :root {
     --primary-dark: #22333B;
-    /* --c1 */
     --primary-accent: #c6ad8f;
-    /* --c2 */
     --light-bg: #FAF9F6;
-    /* --c3 */
     --light-secondary: #F2E8CF;
-    /* --c4 */
     --light-accent: #F2D0A4;
-    /* --c5 */
 
     --text-dark: #22333B;
     --text-light: #FAF9F6;
+
     --border-radius: 8px;
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
 
-/* Reset e Estilos Base */
+/* === RESET === */
 * {
     margin: 0;
     padding: 0;
@@ -30,11 +26,9 @@ body {
     background-color: var(--light-bg);
     color: var(--text-dark);
     line-height: 1.6;
-    padding: 0;
-    margin: 0;
 }
 
-/* Header */
+/* === HEADER === */
 .main-header {
     background-color: var(--primary-dark);
     padding: 1rem 2rem;
@@ -46,10 +40,13 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .logo-link {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     transition: var(--transition);
 }
 
@@ -58,7 +55,21 @@ body {
     transform: scale(1.05);
 }
 
-/* Main Content */
+.brand-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+    filter: brightness(95%) contrast(105%);
+    transition: transform var(--transition);
+}
+
+@media (max-width: 500px) {
+    .brand-logo {
+        height: 32px;
+    }
+}
+
+/* === CONTAINER GERAL === */
 .profile-container {
     max-width: 1200px;
     margin: 2rem auto;
@@ -72,7 +83,7 @@ body {
     margin-bottom: 3rem;
 }
 
-/* Seção de Progresso */
+/* === SEÇÃO DE PROGRESSO === */
 #reading-progress-section {
     background-color: var(--light-secondary);
     padding: 2rem;
@@ -90,10 +101,9 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Formulário */
+/* === FORMULÁRIO === */
 .progress-form {
     display: grid;
-    grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
@@ -121,7 +131,8 @@ textarea {
     border: 1px solid var(--primary-accent);
     border-radius: var(--border-radius);
     background-color: var(--light-bg);
-    font-family: 'Cal Sans', sans-serif;
+    font-family: inherit;
+    font-size: 1rem;
     transition: var(--transition);
 }
 
@@ -157,7 +168,7 @@ textarea {
     color: var(--text-dark);
 }
 
-/* Barra de Progresso */
+/* === BARRA DE PROGRESSO === */
 .progress-visualization {
     margin-top: 2rem;
     background-color: var(--light-bg);
@@ -192,7 +203,7 @@ textarea {
     color: var(--primary-dark);
 }
 
-/* Seção de Livros */
+/* === SEÇÃO DE LIVROS === */
 #all-books-section {
     background-color: var(--light-secondary);
     padding: 2rem;
@@ -210,7 +221,7 @@ textarea {
     margin-bottom: 0.5rem;
 }
 
-/* Filtros */
+/* === FILTROS === */
 .filter-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -236,7 +247,7 @@ textarea {
     border-color: var(--primary-dark);
 }
 
-/* Grid de Livros */
+/* === GRID DE LIVROS === */
 .books-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -251,7 +262,7 @@ textarea {
     opacity: 0.7;
 }
 
-/* Classes utilitárias */
+/* === ACESSIBILIDADE === */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -264,7 +275,7 @@ textarea {
     border-width: 0;
 }
 
-/* Responsividade */
+/* === RESPONSIVIDADE === */
 @media (max-width: 768px) {
     .form-row {
         grid-template-columns: 1fr;
@@ -291,23 +302,5 @@ textarea {
 
     .books-grid {
         grid-template-columns: 1fr;
-    }
-}
-
-.brand-logo {
-    height: 40px;
-    width: auto;
-    display: block;
-    transition: transform var(--transition);
-    filter: brightness(95%) contrast(105%);
-}
-
-.brand:hover .brand-logo {
-    transform: scale(1.05);
-}
-
-@media (max-width: 500px) {
-    .brand-logo {
-        height: 32px;
     }
 }
