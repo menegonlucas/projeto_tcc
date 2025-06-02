@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Início | Palavraria</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
-    </style>
-    <link rel="stylesheet" href="../web/styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../web/styles/home.css" />
 </head>
 
 <body>
     <header>
         <a href="home.html" class="brand" title="Início">
-
-            <span class="brand-text">Palavraria</span>
+            <img src="./img/logo.png" alt="Logo Palavraria" class="brand-logo">
         </a>
+
         <form class="group search-bar" autocomplete="off">
             <svg class="search-icon" viewBox="0 0 24 24">
                 <circle cx="11" cy="11" r="7" stroke="#bdbecb" stroke-width="2" fill="none" />
@@ -24,13 +25,41 @@
             </svg>
             <input class="input" type="text" placeholder="Pesquisar..." aria-label="Pesquisar">
         </form>
-        <a href="perfil.html" class="profile-link" title="Perfil do usuário">
+
+        <a href="profile.html" class="profile-link" title="Perfil do usuário">
             <svg class="profile-icon" viewBox="0 0 32 32" fill="none">
                 <circle cx="16" cy="12" r="7" stroke="#22333B" stroke-width="2" fill="#fff" />
                 <ellipse cx="16" cy="25" rx="10" ry="6" stroke="#22333B" stroke-width="2" fill="#fff" />
             </svg>
         </a>
     </header>
+
+    <main>
+        <section class="dashboard-sections">
+            <div class="dashboard-card atividades">
+                <h2>Atividades Recentes</h2>
+                <ul id="atividades-list">
+                    <li>Carregando...</li>
+                </ul>
+            </div>
+
+            <div class="dashboard-card sugestoes">
+                <h2>Sugestões</h2>
+                <ul id="sugestoes-list">
+                    <li>Carregando...</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="dashboard-sections">
+            <div class="dashboard-card metas">
+                <h2>🎯 Metas</h2>
+                <ul id="metas-list">
+                    <li>Carregando...</li>
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

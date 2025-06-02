@@ -1,88 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seu perfil</title>
-    <link rel="stylesheet" href="../styles/profile.css">
+    <meta name="description" content="Acompanhe seu progresso de leitura e gerencie sua biblioteca pessoal">
+    <title>Meu Perfil de Leitura | Palavraria</title>
+
+    <!-- Pré-conexão para melhor performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/profile.css">
+
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/logo.png" type="image/png">
+
+    <!-- JavaScript (com defer) -->
     <script defer src="../script/profile.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
-    </style>
-    <link rel="icon" href="../img/logo.png">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <a href="../index.html">
-
-                <img src="../img/logo.png" alt="Logo Palavraria">
+    <header class="main-header">
+        <div class="header-container">
+            <a href="./home.html" class="brand-logo" aria-label="Voltar para página inicial">
+                <img src="./img/logo.png" alt="Logo Palavraria" width="60" height="60">
             </a>
+            <h1 class="sr-only">Palavraria - Seu perfil de leitura</h1>
         </div>
-
     </header>
-    <main>
-        <div id="top-sections">
+
+    <main class="profile-container">
+        <div class="top-sections">
             <!-- Seção de Registro de Leitura -->
-            <section id="reading-progress-section">
-                <h2>Registrar Progresso de Leitura</h2>
-                <form id="reading-progress-form">
-                    <label for="book-select">Selecione o Livro:</label>
-                    <select id="book-select" name="bookId" required>
-                        <!-- Opções serão carregadas dinamicamente -->
-                    </select>
+            <section id="reading-progress-section" aria-labelledby="progress-heading">
+                <header>
+                    <h2 id="progress-heading">Registrar Progresso de Leitura</h2>
+                </header>
 
-                    <label for="reading-status">Status de Leitura:</label>
-                    <select id="reading-status" name="status" required>
-                        <option value="lido">Lido</option>
-                        <option value="lendo">Lendo</option>
-                        <option value="relendo">Relendo</option>
-                        <option value="abandonado">Abandonado</option>
-                        <option value="quero-ler">Quero Ler</option>
-                    </select>
+                <form id="reading-progress-form" class="progress-form">
+                    <div class="form-group">
+                        <label for="book-select">Selecione o Livro:</label>
+                        <select id="book-select" name="bookId" required aria-required="true">
+                            <option value="" disabled selected>Selecione um livro</option>
+                            <!-- Opções serão carregadas dinamicamente -->
+                        </select>
+                    </div>
 
-                    <label for="total-pages">Total de Páginas:</label>
-                    <input type="number" id="total-pages" name="totalPages" placeholder="Digite o total de páginas"
-                        required>
+                    <div class="form-group">
+                        <label for="reading-status">Status de Leitura:</label>
+                        <select id="reading-status" name="status" required aria-required="true">
+                            <option value="lendo">Lendo</option>
+                            <option value="lido">Lido</option>
+                            <option value="relendo">Relendo</option>
+                            <option value="abandonado">Abandonado</option>
+                            <option value="quero-ler">Quero Ler</option>
+                        </select>
+                    </div>
 
-                    <label for="current-page">Página Atual:</label>
-                    <input type="number" id="current-page" name="currentPage" placeholder="Digite a página atual"
-                        required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="total-pages">Total de Páginas:</label>
+                            <input type="number" id="total-pages" name="totalPages" min="1"
+                                placeholder="Total de páginas" required aria-required="true">
+                        </div>
 
-                    <label for="comment">Comentário:</label>
-                    <textarea id="comment" name="comment"
-                        placeholder="Adicione um comentário sobre sua leitura"></textarea>
+                        <div class="form-group">
+                            <label for="current-page">Página Atual:</label>
+                            <input type="number" id="current-page" name="currentPage" min="0" placeholder="Página atual"
+                                required aria-required="true">
+                        </div>
+                    </div>
 
-                    <button type="submit">Registrar Progresso</button>
+                    <div class="form-group">
+                        <label for="comment">Comentário:</label>
+                        <textarea id="comment" name="comment" rows="4"
+                            placeholder="Adicione um comentário sobre sua leitura"
+                            aria-label="Comentário sobre a leitura"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">Registrar Progresso</button>
                 </form>
 
-                <div id="progress-bar-container">
-                    <div id="progress-bar">
-                        <div id="progress-fill"></div>
+                <div class="progress-visualization" aria-live="polite">
+                    <p>Seu progresso:</p>
+                    <div id="progress-bar-container" class="progress-container">
+                        <div id="progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div id="progress-fill" class="progress-fill"></div>
+                        </div>
+                        <span id="progress-percentage" class="progress-percentage">0%</span>
                     </div>
-                    <p id="progress-percentage">0%</p>
                 </div>
             </section>
         </div>
 
         <!-- Seção de Todos os Livros -->
-        <section id="all-books-section">
-            <h2>Meus Livros</h2>
-            <div id="filter-options">
-                <button data-filter="todos">Todos</button>
-                <button data-filter="lido">Lido</button>
-                <button data-filter="lendo">Lendo</button>
-                <button data-filter="relendo">Relendo</button>
-                <button data-filter="quero-ler">Quero Ler</button>
-                <button data-filter="abandonado">Abandonado</button>
+        <section id="all-books-section" aria-labelledby="books-heading">
+            <header>
+                <h2 id="books-heading">Meus Livros</h2>
+                <p>Gerencie sua biblioteca pessoal</p>
+            </header>
+
+            <div id="filter-options" class="filter-buttons" role="tablist">
+                <button data-filter="todos" role="tab" aria-selected="true">Todos</button>
+                <button data-filter="lendo" role="tab">Lendo</button>
+                <button data-filter="lido" role="tab">Lido</button>
+                <button data-filter="relendo" role="tab">Relendo</button>
+                <button data-filter="quero-ler" role="tab">Quero Ler</button>
+                <button data-filter="abandonado" role="tab">Abandonado</button>
             </div>
-            <div id="books-container">
+
+            <div id="books-container" class="books-grid">
                 <!-- Os livros serão carregados dinamicamente aqui -->
+                <p class="empty-state">Nenhum livro cadastrado ainda. Adicione seu primeiro livro!</p>
             </div>
         </section>
     </main>
+
+    <!-- Adicione isso antes do fechamento do body se necessário -->
+    <!-- <script src="outros-scripts.js"></script> -->
 </body>
 
 </html>
