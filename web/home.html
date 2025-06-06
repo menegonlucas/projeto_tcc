@@ -4,60 +4,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Palavraria - Sua plataforma de atividades linguísticas">
   <title>Início | Palavraria</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Montserrat:wght@400;600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="../web/styles/home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./styles/home.css" />
 </head>
 
 <body>
-  <header>
-    <div class="header-container">
+  <header class="main-header">
+    <div class="header-container container">
       <a href="home.html" class="brand" title="Início">
-        <img src="./img/logo.png" alt="Logo Palavraria" class="brand-logo">
+        <img src="./img/logo.png" alt="Logo Palavraria" class="brand-logo" width="160" height="40">
       </a>
-      <form class="group search-bar" autocomplete="off">
-        <svg class="search-icon" viewBox="0 0 24 24">
-          <circle cx="11" cy="11" r="7" stroke="#bdbecb" stroke-width="2" fill="none"></circle>
-          <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="#bdbecb" stroke-width="2" stroke-linecap="round"></line>
-        </svg>
-        <input class="input" type="text" placeholder="Pesquisar..." aria-label="Pesquisar">
+      
+      <form class="search-bar" autocomplete="off" role="search">
+        <div class="search-group">
+          <button type="submit" class="search-button" aria-label="Pesquisar">
+            <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"></circle>
+              <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+            </svg>
+          </button>
+          <input class="search-input" type="text" placeholder="Pesquisar..." aria-label="Pesquisar na plataforma">
+        </div>
       </form>
-      <a href="profile.html" class="profile-link" title="Perfil do usuário">
-        <svg class="profile-icon" viewBox="0 0 32 32" fill="none">
-          <circle cx="16" cy="12" r="7" stroke="#22333B" stroke-width="2" fill="#fff"></circle>
-          <ellipse cx="16" cy="25" rx="10" ry="6" stroke="#22333B" stroke-width="2" fill="#fff"></ellipse>
-        </svg>
-      </a>
+      
+      <nav class="user-nav">
+        <a href="profile.html" class="profile-link" title="Perfil do usuário">
+          <svg class="profile-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <circle cx="16" cy="12" r="7" stroke="currentColor" stroke-width="2" fill="#fff"></circle>
+            <ellipse cx="16" cy="25" rx="10" ry="6" stroke="currentColor" stroke-width="2" fill="#fff"></ellipse>
+          </svg>
+          <span class="sr-only">Perfil do usuário</span>
+        </a>
+      </nav>
+      
+      <button class="mobile-menu-button" aria-label="Abrir menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
 
-  <main>
-    <section class="dashboard-sections">
+  <main class="main-content container">
+    <section class="dashboard-grid">
       <div class="dashboard-card atividades">
-        <h2>Atividades Recentes</h2>
-        <ul id="atividades-list">
-          <li>Carregando...</li>
-        </ul>
+        <div class="card-header">
+          <h2 class="card-title">Atividades Recentes</h2>
+          <button class="card-action" aria-label="Ver todas atividades">
+            <i class="fas fa-ellipsis-h"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <ul class="activity-list" id="atividades-list">
+            <li class="activity-item loading">Carregando atividades...</li>
+          </ul>
+        </div>
       </div>
+      
       <div class="dashboard-card sugestoes">
-        <h2>Sugestões</h2>
-        <ul id="sugestoes-list">
-          <li>Carregando...</li>
-        </ul>
+        <div class="card-header">
+          <h2 class="card-title">Sugestões</h2>
+          <button class="card-action" aria-label="Ver mais sugestões">
+            <i class="fas fa-ellipsis-h"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <ul class="suggestion-list" id="sugestoes-list">
+            <li class="suggestion-item loading">Carregando sugestões...</li>
+          </ul>
+        </div>
       </div>
-    </section>
-    <section class="dashboard-sections">
+      
       <div class="dashboard-card metas">
-        <h2>Metas</h2>
-        <ul id="metas-list">
-          <li>Carregando...</li>
-        </ul>
+        <div class="card-header">
+          <h2 class="card-title">Metas</h2>
+          <button class="card-action" aria-label="Gerenciar metas">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <ul class="goal-list" id="metas-list">
+            <li class="goal-item loading">Carregando metas...</li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
+
+  <script src="./scripts/main.js"></script>
 </body>
 
 </html>
