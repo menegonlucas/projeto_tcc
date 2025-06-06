@@ -70,9 +70,22 @@ As atualizações são frequentes para garantir o progresso contínuo e o versio
 
 ### ✅ Datas Confirmadas
 
-- **25/04** — Apresentação inicial do projeto  
+### 📆 25/04 — Apresentação inicial do projeto  
   - Demonstração do Front-End (visual e estrutura)  
   - Progresso do Back-End (lógica e funcionamento)  
+
+### 📆 Próxima Sprint — 16/06
+
+- UML DC (Diagrama de Classes) Back-end
+- UML DA (Diagrama de Atividades) Front-end
+- Análise de viabilidade: Matriz SWOT
+- Triângulo de Ferro: Escopo, Prazo e Custo
+- Iniciar a codificação/desenvolvimento do Banco de Dados
+- Iniciar a codificação/desenvolvimento do Back-End
+- Prótotipo Figma Front-End
+- Iniciar a codificação/desenvolvimento do Front-End
+- Prótipo Figma Mobile
+- Iniciar a codificação/desenvolvimento do Mobile
 
 ---
 
@@ -82,4 +95,3 @@ As atualizações são frequentes para garantir o progresso contínuo e o versio
 - [Gráfico de Gantt](https://wellifabio.github.io/gantt/)
 - [Formulário de envio do repositório](https://docs.google.com/forms/d/e/1FAIpQLSdLh0XsKBlFx1N8lw6gY3bZ6p7Ex01N39sIdodaG4Ka-NJgtA/viewform?usp=dialog)
 
----
