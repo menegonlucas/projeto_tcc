@@ -39,7 +39,7 @@ As atualizações são frequentes para garantir o progresso contínuo e o versio
 - [x] Definição de papéis e responsabilidades
 - [x] Modelagem do negócio com [Canvas](https://wellifabio.github.io/canvas/)
 - [x] Apresentação da proposta inicial
-- [ ] Criação do cronograma com [Gráfico de Gantt](https://wellifabio.github.io/gantt/)
+- [x] Criação do cronograma com [Gráfico de Gantt](https://wellifabio.github.io/gantt/)
 - [x] Criação do repositório no GitHub e adição dos colaboradores
 - [x] Desenvolvimento do protótipo funcional
 - [x] Levantamento dos requisitos funcionais com Diagramas de Casos de Uso (DCU)
@@ -60,21 +60,21 @@ As atualizações são frequentes para garantir o progresso contínuo e o versio
   - [x] Enviar link via [formulário oficial](https://docs.google.com/forms/d/e/1FAIpQLSdLh0XsKBlFx1N8lw6gY3bZ6p7Ex01N39sIdodaG4Ka-NJgtA/viewform?usp=dialog)
 - [x] Criar o protótipo funcional inicial
 - [ ] Levantar os requisitos funcionais com suas respectivas prioridades
-- [ ] Ilustrar os requisitos com Diagramas de Casos de Uso (DCU)
-- [ ] Modelar o banco de dados (MER e DER)
-- [ ] Criar o Diagrama de Classes do Back-End
+- [x] Ilustrar os requisitos com Diagramas de Casos de Uso (DCU)
+- [x] Modelar o banco de dados (MER e DER)
+- [x] Criar o Diagrama de Classes do Back-End
 
 ---
 
 ## 📅 Cronograma de Apresentações
 
-### ✅ Datas Confirmadas
+### ✅ Datas 
 
 ### 📆 25/04 — Apresentação inicial do projeto  
   - Demonstração do Front-End (visual e estrutura)  
   - Progresso do Back-End (lógica e funcionamento)  
 
-### 📆 Próxima Sprint — 16/06
+### 📆 16/06
 
 - UML DC (Diagrama de Classes) Back-end
 - UML DA (Diagrama de Atividades) Front-end
