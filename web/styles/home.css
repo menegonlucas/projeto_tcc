@@ -37,10 +37,9 @@ body {
 /* === HEADER === */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 24px;
-  padding: 14px 5vw;
+  padding: 0;
   background: var(--c1);
   box-shadow: var(--shadow-header);
   width: 100%;
@@ -51,6 +50,15 @@ header {
   top: 0;
   z-index: 1000;
   transition: box-shadow var(--transition);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 24px;
+  padding: 14px 5vw;
 }
 
 /* === BRAND === */
@@ -68,10 +76,6 @@ header {
 .brand:hover {
   color: var(--c2);
   transform: translateY(-1px);
-}
-
-.brand-text {
-  letter-spacing: 1px;
 }
 
 .brand-logo {
@@ -232,6 +236,11 @@ main {
     gap: 12px;
   }
 
+  .header-container {
+    padding: 10px 2vw;
+    gap: 12px;
+  }
+
   .group.search-bar {
     margin: 0 12px;
     max-width: 220px;
@@ -259,6 +268,12 @@ main {
     margin-top: 0;
   }
 
+  .header-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
   .group.search-bar {
     margin: 10px 0;
     width: 100%;
@@ -270,8 +285,7 @@ main {
     display: none;
   }
 
-  .brand-logo,
-  .brand-icon {
+  .brand-logo {
     height: 32px;
     width: 32px;
   }
@@ -295,98 +309,7 @@ main {
     font-size: 0.94rem;
     padding: 10px 14px;
   }
-}
 
-/* ...existing code... */
-
-/* === HEADER === */
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  background: var(--c1);
-  box-shadow: var(--shadow-header);
-  width: 100%;
-  max-width: 1200px;
-  margin: 16px auto 0;
-  border-radius: var(--radius-lg);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: box-shadow var(--transition);
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  gap: 24px;
-  padding: 14px 5vw;
-}
-
-/* === BRAND === */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.7rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--c3);
-  transition: all var(--transition);
-}
-
-.brand:hover {
-  color: var(--c2);
-  transform: translateY(-1px);
-}
-
-.brand-text {
-  letter-spacing: 1px;
-}
-
-.brand-logo {
-  height: 40px;
-  width: auto;
-  display: block;
-  transition: transform var(--transition);
-  filter: brightness(95%) contrast(105%);
-}
-
-.brand:hover .brand-logo {
-  transform: scale(1.05);
-}
-
-/* ...restante do código permanece igual... */
-
-/* === RESPONSIVO HEADER === */
-@media (max-width: 900px) {
-  .header-container {
-    padding: 10px 2vw;
-    gap: 12px;
-  }
-
-  header {
-    max-width: 98vw;
-  }
-}
-
-@media (max-width: 700px) {
-  header {
-    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-    margin-top: 0;
-  }
-
-  .header-container {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-}
-
-@media (max-width: 500px) {
   .header-container {
     padding: 8px 0;
     gap: 6px;
