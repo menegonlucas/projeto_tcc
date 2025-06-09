@@ -1,19 +1,12 @@
 # 📘 Projeto Final — Técnico em Desenvolvimento de Sistemas
-  ### A "Palavraria" chega com o intuito de facilitar o registro das suas leituras. Você pode adicionar sua biblioteca completa e filtrar por "Lido, lendo, relendo, quero ler e abandonado". Aproveite as sugestões para novos livros!
+
 ---
 
-## 👥 Integrantes
+![Tela inicial](1.png)
+![Sugestões de livros](8.png)
+![Metas de leitura](10.png)
+![Perfil do usuário](11.png)
 
-- Emily Goulart  
-- Gabriel Araújo  
-- Henrico Ramalho  
-- Lucas Menegon
-
-
-![alt text](1.png)
-![alt text](8.png)
-![alt text](10.png)
-![alt text](11.png)
 ---
 
 ## 📂 Descrição do Repositório
@@ -73,23 +66,23 @@ As atualizações são frequentes para garantir o progresso contínuo e o versio
 
 ## 📅 Cronograma de Apresentações
 
-### ✅ Datas 
+### ✅ Datas
 
-### 📆 25/04 — Apresentação inicial do projeto  
-  - Demonstração do Front-End (visual e estrutura)  
-  - Progresso do Back-End (lógica e funcionamento)  
+#### 📆 25/04 — Apresentação inicial do projeto  
+- Demonstração do Front-End (visual e estrutura)  
+- Progresso do Back-End (lógica e funcionamento)  
 
-### 📆 16/06
+#### 📆 16/06
 
-- UML DC (Diagrama de Classes) Back-end
-- UML DA (Diagrama de Atividades) Front-end
+- UML DC (Diagrama de Classes) Back-End
+- UML DA (Diagrama de Atividades) Front-End
 - Análise de viabilidade: Matriz SWOT
 - Triângulo de Ferro: Escopo, Prazo e Custo
 - Iniciar a codificação/desenvolvimento do Banco de Dados
 - Iniciar a codificação/desenvolvimento do Back-End
-- Prótotipo Figma Front-End
+- Protótipo Figma Front-End
 - Iniciar a codificação/desenvolvimento do Front-End
-- Prótipo Figma Mobile
+- Protótipo Figma Mobile
 - Iniciar a codificação/desenvolvimento do Mobile
 
 ---
@@ -99,4 +92,3 @@ As atualizações são frequentes para garantir o progresso contínuo e o versio
 - [Canvas do Projeto](https://wellifabio.github.io/canvas/)
 - [Gráfico de Gantt](https://wellifabio.github.io/gantt/)
 - [Formulário de envio do repositório](https://docs.google.com/forms/d/e/1FAIpQLSdLh0XsKBlFx1N8lw6gY3bZ6p7Ex01N39sIdodaG4Ka-NJgtA/viewform?usp=dialog)
-
