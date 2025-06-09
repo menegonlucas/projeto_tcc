@@ -9,6 +9,11 @@
 - Henrico Ramalho  
 - Lucas Menegon
 
+
+![alt text](1.png)
+![alt text](8.png)
+![alt text](10.png)
+![alt text](11.png)
 ---
 
 ## 📂 Descrição do Repositório
