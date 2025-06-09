@@ -1,6 +1,5 @@
 # 📘 Projeto Final — Técnico em Desenvolvimento de Sistemas
-  A "Palavraria" chega com o intuito de facilitar o registro das suas leituras. Você pode adicionar sua biblioteca completa e filtrar por "Lido, lendo, relendo, quero ler e abandonado".
-  Aproveite as sugestões para novos livros
+  ### A "Palavraria" chega com o intuito de facilitar o registro das suas leituras. Você pode adicionar sua biblioteca completa e filtrar por "Lido, lendo, relendo, quero ler e abandonado". Aproveite as sugestões para novos livros!
 ---
 
 ## 👥 Integrantes
