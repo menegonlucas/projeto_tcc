@@ -2,10 +2,10 @@
 
 ---
 
-![Tela inicial](1.png)
-![Sugestões de livros](8.png)
-![Metas de leitura](10.png)
-![Perfil do usuário](11.png)
+![Tela inicial](./web/img/1.png)
+![Sugestões de livros](./web/img/8.png)
+![Metas de leitura](./web/img/10.png)
+![Perfil do usuário](./web/img/11.png)
 
 ---
 
