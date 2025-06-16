@@ -42,8 +42,8 @@ As atualizações são frequentes para garantir o progresso contínuo e o versio
 - [x] Início do desenvolvimento do Back-End
 - [x] Início do desenvolvimento do Front-End
 - [x] Início da versão Mobile (layout no Figma)
-- [ ] Criação do Triângulo de Ferro
-- [ ] Criação da Matriz SWOT
+- [x] Criação do Triângulo de Ferro
+- [x] Criação da Matriz SWOT
 
 ---
 
@@ -79,6 +79,9 @@ As atualizações são frequentes para garantir o progresso contínuo e o versio
 - Iniciar a codificação/desenvolvimento do Front-End
 - Protótipo Figma Mobile
 - Iniciar a codificação/desenvolvimento do Mobile
+
+![](Diagrama1.jpeg)
+![alt text](Diagrama2.jpeg)
 
 ---
 
