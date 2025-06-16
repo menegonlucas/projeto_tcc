@@ -1,12 +1,7 @@
 # 📘 Projeto Final — Técnico em Desenvolvimento de Sistemas
 
 ---
-
-![Tela inicial](./web/img/1.png)
-![Sugestões de livros](./web/img/8.png)
-![Metas de leitura](./web/img/10.png)
-![Perfil do usuário](./web/img/11.png)
-
+![alt text](Palette.png)
 ---
 
 ## 📂 Descrição do Repositório
