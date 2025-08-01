@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,10 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cal+Sans:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="icon" href="./img/logo.png" type="image/png" />
   <link rel="stylesheet" href="./styles/profile.css" />
   <script defer src="../script/profile.js"></script>
 </head>
+
 <body>
   <header class="main-header">
     <div class="header-container">
@@ -21,6 +22,25 @@
       <h1 class="sr-only">Palavraria - Perfil do Usuário</h1>
     </div>
   </header>
+
+  <!-- Perfil do usuário -->
+  <section class="user-profile">
+    <div class="profile-info">
+      <img src="./img/profile-default.png" alt="Foto de perfil do usuário" class="profile-photo" width="100"
+        height="100">
+      <div class="user-details">
+        <h2 id="user-name">Nome do Usuário</h2>
+      </div>
+    </div>
+    <div class="favorite-books">
+      <h3>Livros Favoritos</h3>
+      <div class="favorites-list" id="favorites-list">
+        <!-- Os livros favoritos serão inseridos dinamicamente pela API -->
+      </div>
+      <button id="add-favorite-btn" class="add-favorite-btn" type="button">Adicionar Favorito</button>
+    </div>
+  </section>
+
   <main class="profile-container">
     <section id="reading-progress-section" class="top-sections" aria-labelledby="progress-heading">
       <header>
@@ -62,7 +82,8 @@
       <div class="progress-visualization" aria-live="polite">
         <p>Seu progresso:</p>
         <div id="progress-bar-container" class="progress-container">
-          <div id="progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div id="progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+            aria-valuemax="100">
             <div id="progress-fill" class="progress-fill"></div>
           </div>
           <span id="progress-percentage" class="progress-percentage">0%</span>
@@ -76,7 +97,6 @@
       </header>
       <ul id="recent-logs-list" class="recent-logs-list">
         <li class="empty-state">Carregando registros...</li>
-        <!-- Os registros recentes do usuário serão inseridos aqui pelo backend -->
       </ul>
     </section>
 
@@ -99,4 +119,5 @@
     </section>
   </main>
 </body>
+
 </html>
