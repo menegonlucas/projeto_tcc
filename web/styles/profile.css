@@ -25,6 +25,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Cal Sans', 'Montserrat', Arial, sans-serif;
 }
 
 html {
@@ -196,8 +197,8 @@ body {
 
 .add-favorite-btn {
     margin-top: 0.2rem;
-    background: var(--accent);
-    color: var(--primary);
+    background: var(--primary-light);
+    color: var(--bg);
     border: none;
     border-radius: var(--radius-sm);
     padding: 0.5rem 1.2rem;
@@ -209,7 +210,7 @@ body {
 }
 
 .add-favorite-btn:hover {
-    background: var(--primary-light);
+    background: var(--primary);
     color: var(--white);
     box-shadow: 0 2px 8px rgba(34, 51, 59, 0.10);
 }
@@ -229,7 +230,7 @@ body {
 
 section header h2 {
     font-size: 1.4rem;
-    color: var(--primary-light);
+    color: var(--primary);
     font-weight: 700;
     margin-bottom: 0.5rem;
     letter-spacing: 0.5px;
@@ -376,7 +377,7 @@ textarea {
 
 /* ===== SEÇÃO DE LIVROS ===== */
 #all-books-section {
-    background: var(--bg-alt);
+    background: var(--bg);
     padding: 2rem;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow);

@@ -132,8 +132,8 @@ body {
 }
 
 .search-input:focus {
-  background: var(--accent);
-  color: var(--primary);
+  background: var(--primary);
+  color: var(--bg);
 }
 
 .search-button {
@@ -146,12 +146,12 @@ body {
   cursor: pointer;
   color: #bdbecb;
   font-size: 1.1rem;
-  transition: color var(--transition);
+  transition: color var(--primary);
   z-index: 2;
 }
 
 .search-button:hover {
-  color: var(--accent);
+  color: var(--primary);
 }
 
 .search-icon {

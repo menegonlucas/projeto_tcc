@@ -29,15 +29,15 @@
       <img src="./img/profile-default.png" alt="Foto de perfil do usuário" class="profile-photo" width="100"
         height="100">
       <div class="user-details">
-        <h2 id="user-name">Nome do Usuário</h2>
+        <h2 id="user-name">@exemplo12</h2>
       </div>
     </div>
     <div class="favorite-books">
-      <h3>Livros Favoritos</h3>
+      <h3>Top 5</h3>
       <div class="favorites-list" id="favorites-list">
         <!-- Os livros favoritos serão inseridos dinamicamente pela API -->
       </div>
-      <button id="add-favorite-btn" class="add-favorite-btn" type="button">Adicionar Favorito</button>
+      <button id="add-favorite-btn" class="add-favorite-btn" type="button">Editar favoritos</button>
     </div>
   </section>
 
@@ -48,13 +48,13 @@
       </header>
       <form id="reading-progress-form" class="progress-form" novalidate>
         <div class="form-group">
-          <label for="book-select">Selecione o Livro:</label>
+          <label for="book-select">O que você está lendo?</label>
           <select id="book-select" name="bookId" required>
             <option value="" disabled selected>Selecione um livro</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="reading-status">Status de Leitura:</label>
+          <label for="reading-status">Status</label>
           <select id="reading-status" name="status" required>
             <option value="lendo">Lendo</option>
             <option value="lido">Lido</option>
@@ -65,7 +65,7 @@
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label for="total-pages">Total de Páginas:</label>
+            <label for="total-pages">Total:</label>
             <input type="number" id="total-pages" name="totalPages" min="1" placeholder="Ex: 320" required />
           </div>
           <div class="form-group">
@@ -74,13 +74,13 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="comment">Comentário:</label>
+          <label for="comment">Comente sobre sua leitura aqui!</label>
           <textarea id="comment" name="comment" rows="4" placeholder="Compartilhe algo sobre sua leitura..."></textarea>
         </div>
-        <button type="submit" class="submit-button">Registrar Progresso</button>
+        <button type="submit" class="submit-button">Salvar</button>
       </form>
       <div class="progress-visualization" aria-live="polite">
-        <p>Seu progresso:</p>
+        <p>Meu Progresso:</p>
         <div id="progress-bar-container" class="progress-container">
           <div id="progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
             aria-valuemax="100">
@@ -93,17 +93,16 @@
 
     <section id="recent-logs-section" class="top-sections" aria-labelledby="recent-logs-heading">
       <header>
-        <h2 id="recent-logs-heading">Registros Recentes</h2>
+        <h2 id="recent-logs-heading">Recentes</h2>
       </header>
       <ul id="recent-logs-list" class="recent-logs-list">
-        <li class="empty-state">Carregando registros...</li>
+        <li class="empty-state">Carregando...</li>
       </ul>
     </section>
 
     <section id="all-books-section" aria-labelledby="books-heading">
       <header>
-        <h2 id="books-heading">Meus Livros</h2>
-        <p>Gerencie sua biblioteca pessoal</p>
+        <h2 id="books-heading">Minha biblioteca</h2>
       </header>
       <div id="filter-options" class="filter-buttons" role="tablist" aria-label="Filtrar livros por status">
         <button data-filter="todos" role="tab" aria-selected="true">Todos</button>
