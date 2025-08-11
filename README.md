@@ -54,7 +54,7 @@ As atualizações são frequentes para garantir o progresso contínuo e o versio
 - [x] Criar repositório no GitHub e adicionar colaboradores  
   - [x] Enviar link via [formulário oficial](https://docs.google.com/forms/d/e/1FAIpQLSdLh0XsKBlFx1N8lw6gY3bZ6p7Ex01N39sIdodaG4Ka-NJgtA/viewform?usp=dialog)  
 - [x] Criar o protótipo funcional inicial  
-- [ ] Levantar os requisitos funcionais com suas respectivas prioridades  
+- [x] Levantar os requisitos funcionais com suas respectivas prioridades  
 - [x] Ilustrar os requisitos com Diagramas de Casos de Uso (DCU)  
 - [x] Modelar o banco de dados (MER e DER)  
 - [x] Criar o Diagrama de Classes do Back-End  
@@ -88,7 +88,7 @@ As atualizações são frequentes para garantir o progresso contínuo e o versio
 
 ---
 
-## 📆 Próxima Sprint (Sprint 04 — 29/08)
+#### 29/08 - Novas funcionalidades e relatório de testes 
 
 Funcionalidades principais previstas:  
 
