@@ -1,7 +1,9 @@
 # 📘 Projeto Final — Técnico em Desenvolvimento de Sistemas
 
 ---
-![alt text](Palette.png)
+
+![Paleta de Cores](Palette.png)
+
 ---
 
 ## 📂 Descrição do Repositório
@@ -13,93 +15,96 @@ As atualizações são frequentes para garantir o progresso contínuo e o versio
 
 ## 🛠️ Tecnologias e Ferramentas Utilizadas
 
-- **Prisma**
-- **XAMPP**
-- **JavaScript**
-- **HTML5**
-- **CSS3**
-- **Node.js**
-- **Insomnia**
-- **Google Books API**
-- **Visual Studio Code**
-- **Figma**
+- **Prisma**  
+- **XAMPP**  
+- **JavaScript**  
+- **HTML5**  
+- **CSS3**  
+- **Node.js**  
+- **Insomnia**  
+- **Google Books API**  
+- **Visual Studio Code**  
+- **Figma**  
 
 ---
 
 ## 📌 Backlog Geral do Projeto
 
-- [x] Escolha da metodologia (SCRUM, KANBAN, XP ou outra)
-- [x] Definição de papéis e responsabilidades
-- [x] Modelagem do negócio com [Canvas](https://wellifabio.github.io/canvas/)
-- [x] Apresentação da proposta inicial
-- [x] Criação do cronograma com [Gráfico de Gantt](https://wellifabio.github.io/gantt/)
-- [x] Criação do repositório no GitHub e adição dos colaboradores
-- [x] Desenvolvimento do protótipo funcional
-- [x] Levantamento dos requisitos funcionais com Diagramas de Casos de Uso (DCU)
-- [x] Modelagem do banco de dados (MER e DER)
-- [x] Criação do Diagrama de Classes (DC) para o Back-End
-- [x] Início do desenvolvimento do banco de dados
-- [x] Início do desenvolvimento do Back-End
-- [x] Início do desenvolvimento do Front-End
-- [x] Início da versão Mobile (layout no Figma)
-- [x] Criação do Triângulo de Ferro
-- [x] Criação da Matriz SWOT
+- [x] Escolha da metodologia (SCRUM, KANBAN, XP ou outra)  
+- [x] Definição de papéis e responsabilidades  
+- [x] Modelagem do negócio com [Canvas](https://wellifabio.github.io/canvas/)  
+- [x] Apresentação da proposta inicial  
+- [x] Criação do cronograma com [Gráfico de Gantt](https://wellifabio.github.io/gantt/)  
+- [x] Criação do repositório no GitHub e adição dos colaboradores  
+- [x] Desenvolvimento do protótipo funcional  
+- [x] Levantamento dos requisitos funcionais com Diagramas de Casos de Uso (DCU)  
+- [x] Modelagem do banco de dados (MER e DER)  
+- [x] Criação do Diagrama de Classes (DC) para o Back-End  
+- [x] Início do desenvolvimento do banco de dados  
+- [x] Início do desenvolvimento do Back-End  
+- [x] Início do desenvolvimento do Front-End  
+- [x] Início da versão Mobile (layout no Figma)  
+- [x] Criação do Triângulo de Ferro  
+- [x] Criação da Matriz SWOT  
 
 ---
 
 ## 🚀 Backlog da Sprint Atual
 
 - [x] Criar repositório no GitHub e adicionar colaboradores  
-  - [x] Enviar link via [formulário oficial](https://docs.google.com/forms/d/e/1FAIpQLSdLh0XsKBlFx1N8lw6gY3bZ6p7Ex01N39sIdodaG4Ka-NJgtA/viewform?usp=dialog)
-- [x] Criar o protótipo funcional inicial
-- [ ] Levantar os requisitos funcionais com suas respectivas prioridades
-- [x] Ilustrar os requisitos com Diagramas de Casos de Uso (DCU)
-- [x] Modelar o banco de dados (MER e DER)
-- [x] Criar o Diagrama de Classes do Back-End
+  - [x] Enviar link via [formulário oficial](https://docs.google.com/forms/d/e/1FAIpQLSdLh0XsKBlFx1N8lw6gY3bZ6p7Ex01N39sIdodaG4Ka-NJgtA/viewform?usp=dialog)  
+- [x] Criar o protótipo funcional inicial  
+- [ ] Levantar os requisitos funcionais com suas respectivas prioridades  
+- [x] Ilustrar os requisitos com Diagramas de Casos de Uso (DCU)  
+- [x] Modelar o banco de dados (MER e DER)  
+- [x] Criar o Diagrama de Classes do Back-End  
 
 ---
 
 ## 📅 Cronograma de Apresentações
 
-### ✅ Datas
+### ✅ Datas Importantes
 
-#### 📆 25/04 — Apresentação inicial do projeto  
+#### 📆 25/04 — Apresentação Inicial do Projeto  
 - Demonstração do Front-End (visual e estrutura)  
 - Progresso do Back-End (lógica e funcionamento)  
 
-#### 📆 16/06
+#### 📆 16/06 — Apresentação Detalhada  
+- UML DC (Diagrama de Classes) Back-End  
+- UML DA (Diagrama de Atividades) Front-End  
+- Análise de viabilidade: Matriz SWOT  
+- Triângulo de Ferro: Escopo, Prazo e Custo  
+- Início da codificação/desenvolvimento do Banco de Dados  
+- Início da codificação/desenvolvimento do Back-End  
+- Protótipo Figma Front-End  
+- Início da codificação/desenvolvimento do Front-End  
+- Protótipo Figma Mobile  
+- Início da codificação/desenvolvimento do Mobile  
 
-- UML DC (Diagrama de Classes) Back-End
-- UML DA (Diagrama de Atividades) Front-End
-- Análise de viabilidade: Matriz SWOT
-- Triângulo de Ferro: Escopo, Prazo e Custo
-- Iniciar a codificação/desenvolvimento do Banco de Dados
-- Iniciar a codificação/desenvolvimento do Back-End
-- Protótipo Figma Front-End
-- Iniciar a codificação/desenvolvimento do Front-End
-- Protótipo Figma Mobile
-- Iniciar a codificação/desenvolvimento do Mobile
+---
 
-![](Diagrama1.jpeg)
-![alt text](Diagrama2.jpeg)
+![Diagrama 1](Diagrama1.jpeg)  
+![Diagrama 2](Diagrama2.jpeg)  
 
 ---
 
 ## 📆 Próxima Sprint (Sprint 04 — 29/08)
 
-Funcionalidades principais implementadas, como:
+Funcionalidades principais previstas:  
 
-- **Back-End**: CRUDs (Cadastro, Listagem, Alteração e Exclusão) das principais tabelas.
-- **Back-Front**: CRUDs das principais telas com responsividade.
-- **Login** com autenticação real (segurança JWT).
-- Integração do **Front-End** com o **Back-End** e banco de dados.
-- Fluxo de navegação funcionando (**Web** e/ou **Mobile**).
-- Relatório de testes manuais unitários, de integração e ponto a ponto.
-- Entregas através do repositório do projeto no **GitHub**, com evidências dos testes em relatório no formato **PDF**.
+- **Back-End**: CRUDs (Cadastro, Listagem, Alteração e Exclusão) das principais tabelas  
+- **Back-Front**: CRUDs das principais telas com responsividade  
+- **Login** com autenticação real (segurança JWT)  
+- Integração do **Front-End** com o **Back-End** e banco de dados  
+- Fluxo de navegação funcionando (**Web** e/ou **Mobile**)  
+- Relatório de testes manuais unitários, de integração e ponta a ponta  
+- Entregas através do repositório do projeto no **GitHub**, com evidências dos testes em relatório no formato **PDF**  
 
 ---
 
 ## 📈 Links Úteis
 
-- [Gráfico de Gantt](https://wellifabio.github.io/gantt/)
-- [Formulário de envio do repositório](https://docs.google.com/forms/d/e/1FAIpQLSdLh0XsKBlFx1N8lw6gY3bZ6p7Ex01N39sIdodaG4Ka-NJgtA/viewform?usp=dialog)
+- [Gráfico de Gantt](https://wellifabio.github.io/gantt/)  
+- [Formulário de envio do repositório](https://docs.google.com/forms/d/e/1FAIpQLSdLh0XsKBlFx1N8lw6gY3bZ6p7Ex01N39sIdodaG4Ka-NJgtA/viewform?usp=dialog)  
+
+---
