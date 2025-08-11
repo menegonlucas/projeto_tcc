@@ -85,8 +85,21 @@ As atualizações são frequentes para garantir o progresso contínuo e o versio
 
 ---
 
+## 📆 Próxima Sprint (Sprint 04 — 29/08)
+
+Funcionalidades principais implementadas, como:
+
+- **Back-End**: CRUDs (Cadastro, Listagem, Alteração e Exclusão) das principais tabelas.
+- **Back-Front**: CRUDs das principais telas com responsividade.
+- **Login** com autenticação real (segurança JWT).
+- Integração do **Front-End** com o **Back-End** e banco de dados.
+- Fluxo de navegação funcionando (**Web** e/ou **Mobile**).
+- Relatório de testes manuais unitários, de integração e ponto a ponto.
+- Entregas através do repositório do projeto no **GitHub**, com evidências dos testes em relatório no formato **PDF**.
+
+---
+
 ## 📈 Links Úteis
 
-- [Canvas do Projeto](https://wellifabio.github.io/canvas/)
 - [Gráfico de Gantt](https://wellifabio.github.io/gantt/)
 - [Formulário de envio do repositório](https://docs.google.com/forms/d/e/1FAIpQLSdLh0XsKBlFx1N8lw6gY3bZ6p7Ex01N39sIdodaG4Ka-NJgtA/viewform?usp=dialog)
