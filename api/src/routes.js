@@ -32,5 +32,9 @@ routes.post('/registros', registroController.create);
 routes.put('/registros/:id', registroController.update);
 routes.delete('/registros/:id', registroController.remove);
 
+// Rota para busca de livros na API do Google Books
+routes.use('/books', require('./controllers/controllerapi'));
+
+
 
 module.exports = routes;
