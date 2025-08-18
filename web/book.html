@@ -19,8 +19,8 @@
                 alert("Digite algo para buscar");
                 return;
             }
-
-            const res = await fetch(`/books/search?q=${encodeURIComponent(query)}`);
+            const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}`);
+            
             const data = await res.json();
 
             const resultsDiv = document.getElementById("results");

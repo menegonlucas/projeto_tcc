@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cal+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles/profile.css" />
-  <script defer src="../script/profile.js"></script>
+  <script defer src="./script/profile.js"></script>
 </head>
 
 <body>
@@ -26,8 +26,7 @@
   <!-- Perfil do usuário -->
   <section class="user-profile">
     <div class="profile-info">
-      <img src="./img/profile-default.png" alt="Foto de perfil do usuário" class="profile-photo" width="100"
-        height="100">
+      <img src="./img/user.png" alt="Foto de perfil do usuário" class="profile-photo" width="100" height="100" />
       <div class="user-details">
         <h2 id="user-name">@usuario</h2>
       </div>
@@ -42,15 +41,21 @@
   </section>
 
   <main class="profile-container">
+    <!-- Registrar progresso -->
     <section id="reading-progress-section" class="top-sections" aria-labelledby="progress-heading">
       <header>
         <h2 id="progress-heading">Registrar Progresso de Leitura</h2>
       </header>
       <form id="reading-progress-form" class="progress-form" novalidate>
         <div class="form-group">
-          <label for="book-select">O que você está lendo?</label>
-          <select id="book-select" name="bookId" required>
-            <option value="" disabled selected>Selecione um livro</option>
+  <label for="escolherlivros">O que você está lendo?</label>
+  <input type="text" id="escolherlivros" name="escolherlivros" list="livros-sugestoes" required>
+  <datalist id="livros-sugestoes">
+    <!-- opções serão adicionadas via JS -->
+  </datalist>
+</div>
+            <option value="">Selecione um livro</option>
+            <!-- opções serão adicionadas via JS -->
           </select>
         </div>
         <div class="form-group">
@@ -91,6 +96,7 @@
       </div>
     </section>
 
+    <!-- Logs recentes -->
     <section id="recent-logs-section" class="top-sections" aria-labelledby="recent-logs-heading">
       <header>
         <h2 id="recent-logs-heading">Recentes</h2>
@@ -100,10 +106,25 @@
       </ul>
     </section>
 
+    <!-- Minha biblioteca -->
     <section id="all-books-section" aria-labelledby="books-heading">
       <header>
         <h2 id="books-heading">Minha biblioteca</h2>
       </header>
+
+      <!-- Formulário para adicionar livro -->
+      <form id="addBookForm" class="add-book-form">
+        <div class="form-group">
+          <label for="book-title">Título</label>
+          <input type="text" id="book-title" name="title" required />
+        </div>
+        <div class="form-group">
+          <label for="book-author">Autor</label>
+          <input type="text" id="book-author" name="author" required />
+        </div>
+        <button type="submit" class="submit-button">Adicionar Livro</button>
+      </form>
+
       <div id="filter-options" class="filter-buttons" role="tablist" aria-label="Filtrar livros por status">
         <button data-filter="todos" role="tab" aria-selected="true">Todos</button>
         <button data-filter="lendo" role="tab">Lendo</button>

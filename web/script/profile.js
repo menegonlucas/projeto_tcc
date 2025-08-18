@@ -1,99 +1,183 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const addBookForm = document.getElementById("add-book-form");
+    const addBookForm = document.getElementById("addBookForm");
     const readingProgressForm = document.getElementById("reading-progress-form");
     const booksContainer = document.getElementById("books-container");
-    const bookSelect = document.getElementById("book-select");
+    const bookInput = document.getElementById("escolherlivros");
+    const bookSuggestions = document.getElementById("livros-sugestoes");
     const progressFill = document.getElementById("progress-fill");
     const progressPercentage = document.getElementById("progress-percentage");
+    let booksData = [];
 
-    // Função para carregar livros do backend
-    async function loadBooks() {
+    // Funções para armazenamento local
+    function getLocalStorageData() {
+        return JSON.parse(localStorage.getItem('readingProgress')) || {};
+    }
+
+    function saveLocalStorageData(data) {
+        localStorage.setItem('readingProgress', JSON.stringify(data));
+    }
+
+    function getBookProgress(bookId) {
+        const data = getLocalStorageData();
+        return data[bookId] || null;
+    }
+
+    function saveBookProgress(bookId, progressData) {
+        const data = getLocalStorageData();
+        data[bookId] = progressData;
+        saveLocalStorageData(data);
+    }
+
+    // Função para carregar livros da API do Google Books
+    async function loadBooks(searchTerm = '') {
         try {
-            const response = await fetch("http://localhost:3000/api/books");
-            const books = await response.json();
+            booksContainer.innerHTML = "<p>Carregando livros...</p>";
+            
+            let apiUrl = 'https://www.googleapis.com/books/v1/volumes?maxResults=20';
+            if (searchTerm) {
+                apiUrl += `&q=${encodeURIComponent(searchTerm)}`;
+            } else {
+                apiUrl += '&q=literatura';
+            }
 
-            // Limpa o contêiner e o select
+            const response = await fetch(apiUrl);
+            if (!response.ok) throw new Error(`Erro HTTP: ${response.status}`);
+            
+            const data = await response.json();
+            booksData = data.items || [];
+
+            // Limpa o contêiner e o datalist
             booksContainer.innerHTML = "";
-            bookSelect.innerHTML = "";
+            bookSuggestions.innerHTML = "";
 
-            books.forEach((book) => {
-                // Adiciona o livro ao contêiner
+            if (booksData.length === 0) {
+                booksContainer.innerHTML = "<p>Nenhum livro encontrado. Tente outro termo de busca.</p>";
+                return;
+            }
+
+            booksData.forEach((item) => {
+                const book = item.volumeInfo;
+                const bookId = item.id;
+                const title = book.title || "Título desconhecido";
+                const authors = book.authors ? book.authors.join(", ") : "Autor desconhecido";
+                const thumbnail = book.imageLinks?.thumbnail || './img/no-cover.jpg';
+
+                // Adiciona ao datalist
+                const option = document.createElement("option");
+                option.value = title;
+                option.dataset.id = bookId;
+                bookSuggestions.appendChild(option);
+
+                // Adiciona ao container de livros
                 const bookElement = document.createElement("div");
                 bookElement.classList.add("book");
+                bookElement.dataset.id = bookId;
+                
+                const progressData = getBookProgress(bookId);
+                const status = progressData?.status || "Não iniciado";
+                const progress = progressData ? 
+                    `${Math.round((progressData.currentPage / progressData.totalPages) * 100)}%` : 
+                    "0%";
+
                 bookElement.innerHTML = `
-                    <h3>${book.title}</h3>
-                    <p>Autor: ${book.author}</p>
-                    <p>Status: ${book.status || "Não definido"}</p>
+                    <div class="book-header">
+                        <img src="${thumbnail}" alt="${title}" class="book-cover" width="60">
+                        <div>
+                            <h3>${title}</h3>
+                            <p class="book-author">${authors}</p>
+                        </div>
+                    </div>
+                    <div class="book-status">
+                        <span class="status-badge ${status}">${status}</span>
+                        <span class="progress-text">${progress}</span>
+                    </div>
+                    <div class="book-actions">
+                        <button class="edit-progress" data-id="${bookId}">Editar Progresso</button>
+                    </div>
                 `;
                 booksContainer.appendChild(bookElement);
-
-                // Adiciona o livro ao select
-                const option = document.createElement("option");
-                option.value = book.id;
-                option.textContent = book.title;
-                bookSelect.appendChild(option);
             });
+
+            // Adiciona eventos aos botões
+            document.querySelectorAll('.edit-progress').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const bookId = e.target.dataset.id;
+                    const book = booksData.find(b => b.id === bookId);
+                    if (book) {
+                        bookInput.value = book.volumeInfo.title;
+                        const progressData = getBookProgress(bookId);
+                        if (progressData) {
+                            document.getElementById('reading-status').value = progressData.status;
+                            document.getElementById('total-pages').value = progressData.totalPages;
+                            document.getElementById('current-page').value = progressData.currentPage;
+                            document.getElementById('comment').value = progressData.comment || '';
+                            updateProgressBar((progressData.currentPage / progressData.totalPages) * 100);
+                        }
+                    }
+                });
+            });
+
         } catch (error) {
             console.error("Erro ao carregar livros:", error);
+            booksContainer.innerHTML = `<p class="error">Erro ao carregar livros: ${error.message}</p>`;
         }
     }
 
-    // Função para adicionar um livro
-    addBookForm.addEventListener("submit", async (event) => {
-        event.preventDefault();
+    // Função para atualizar a barra de progresso
+    function updateProgressBar(progress) {
+        const percentage = Math.min(Math.max(0, progress), 100);
+        progressFill.style.width = `${percentage}%`;
+        progressPercentage.textContent = `${Math.round(percentage)}%`;
+    }
 
-        const title = document.getElementById("book-title").value;
-        const author = document.getElementById("book-author").value;
-
-        try {
-            await fetch("http://localhost:3000/api/books", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ title, author }),
-            });
-
-            addBookForm.reset();
-            loadBooks(); // Recarrega os livros
-        } catch (error) {
-            console.error("Erro ao adicionar livro:", error);
+    // Evento de busca de livros
+    const searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.placeholder = 'Buscar livros...';
+    searchInput.classList.add('search-input');
+    booksContainer.before(searchInput);
+    
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            loadBooks(e.target.value);
         }
     });
 
-    // Função para registrar progresso de leitura
-    readingProgressForm.addEventListener("submit", async (event) => {
+    // Evento de envio do formulário de progresso
+    readingProgressForm.addEventListener("submit", (event) => {
         event.preventDefault();
 
-        const bookId = bookSelect.value;
+        const bookTitle = bookInput.value.trim();
+        const selectedOption = [...bookSuggestions.options].find(opt => opt.value === bookTitle);
+        if (!selectedOption) {
+            alert("Selecione um livro válido da lista de sugestões.");
+            return;
+        }
+
+        const bookId = selectedOption.dataset.id;
         const status = document.getElementById("reading-status").value;
         const totalPages = parseInt(document.getElementById("total-pages").value) || 0;
         const currentPage = parseInt(document.getElementById("current-page").value) || 0;
-        const comment = document.getElementById("comment").value;
+        const comment = document.getElementById("comment").value.trim();
 
-        try {
-            // Atualiza o progresso no backend
-            await fetch(`http://localhost:3000/api/books/${bookId}/progress`, {
-                method: "PATCH",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ status, totalPages, currentPage, comment }),
-            });
-
-            // Atualiza a barra de progresso com os valores enviados
-            const progress = totalPages > 0 ? Math.min((currentPage / totalPages) * 100, 100) : 0;
-            updateProgressBar(progress);
-
-            readingProgressForm.reset();
-            loadBooks(); // Recarrega os livros
-        } catch (error) {
-            console.error("Erro ao registrar progresso:", error);
+        if (totalPages <= 0 || currentPage < 0) {
+            alert("Por favor, insira valores válidos para as páginas.");
+            return;
         }
+
+        saveBookProgress(bookId, {
+            status,
+            totalPages,
+            currentPage,
+            comment,
+            lastUpdated: new Date().toISOString()
+        });
+
+        updateProgressBar((currentPage / totalPages) * 100);
+        readingProgressForm.reset();
+        loadBooks(searchInput.value);
     });
 
-    // Função para atualizar visualmente a barra de progresso
-    function updateProgressBar(progress) {
-        progressFill.style.width = `${progress}%`;
-        progressPercentage.textContent = `${Math.round(progress)}%`;
-    }
-
-    // Carrega os livros ao carregar a página
+    // Inicialização
     loadBooks();
 });
