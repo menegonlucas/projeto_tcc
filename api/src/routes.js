@@ -1,40 +1,54 @@
 const express = require('express');
-const routes = express.Router(); 
+const routes = express.Router();
+
+// Controllers
+const livroController = require('./controllers/livroController');
+const usuarioController = require('./controllers/usuarioController');
+const registroController = require('./controllers/registroController');
+const booksRouter = require('./controllers/controllerapi');
+
+// Middlewares
+const validateUser = require('./middlewares/validateUser');
+const autenticarToken = require('./middlewares/auth');
+const isAdmin = require('./middlewares/isAdmin');
 
 // Rota raiz (teste)
 routes.get('/', (req, res) => {
   return res.json({ titulo: 'Biblioteca Virtual' });
 });
 
-// Controllers
-const livroController = require('./controllers/livroController');
-const usuarioController = require('./controllers/usuarioController');
-const registroController = require('./controllers/registroController');
-
-// Rotas para Livro
+// ------------------- LIVROS -------------------
 routes.get('/livros', livroController.getAll);
 routes.get('/livros/:id', livroController.getOne);
-routes.post('/livros', livroController.create);
-routes.put('/livros/:id', livroController.update);
-routes.delete('/livros/:id', livroController.remove);
 
-// Rotas para Usuario
-routes.get('/usuarios', usuarioController.getAll);
-routes.get('/usuarios/:id', usuarioController.getOne);
-routes.post('/usuarios', usuarioController.create);
-routes.put('/usuarios/:id', usuarioController.update);
-routes.delete('/usuarios/:id', usuarioController.remove);
+// Só admin pode criar, atualizar e remover livros
+routes.post('/livros', autenticarToken, isAdmin, livroController.create);
+routes.put('/livros/:id', autenticarToken, isAdmin, livroController.update);
+routes.delete('/livros/:id', autenticarToken, isAdmin, livroController.remove);
 
-// Rotas para Registro
-routes.get('/registros', registroController.getAll);
-routes.get('/registros/:id', registroController.getOne);
-routes.post('/registros', registroController.create);
-routes.put('/registros/:id', registroController.update);
-routes.delete('/registros/:id', registroController.remove);
+// ------------------- USUÁRIOS -------------------
+routes.get('/usuarios', autenticarToken, isAdmin, usuarioController.getAll);
+routes.get('/usuarios/:id', autenticarToken, isAdmin, usuarioController.getOne);
 
-// Rota para busca de livros na API do Google Books
-routes.use('/books', require('./controllers/controllerapi'));
+// Usuário se cadastra com validação
+routes.post('/usuarios', validateUser, usuarioController.create);
 
+// Somente admin pode editar ou remover usuários
+routes.put('/usuarios/:id', autenticarToken, isAdmin, usuarioController.update);
+routes.delete('/usuarios/:id', autenticarToken, isAdmin, usuarioController.remove);
 
+// ------------------- REGISTROS -------------------
+routes.get('/registros', autenticarToken, registroController.getAll);
+routes.get('/registros/:id', autenticarToken, registroController.getOne);
+
+// Criar registro precisa de login
+routes.post('/registros', autenticarToken, registroController.create);
+
+// Atualizar e remover só admin
+routes.put('/registros/:id', autenticarToken, isAdmin, registroController.update);
+routes.delete('/registros/:id', autenticarToken, isAdmin, registroController.remove);
+
+// ------------------- GOOGLE BOOKS API -------------------
+routes.use('/books', booksRouter);
 
 module.exports = routes;
