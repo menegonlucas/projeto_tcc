@@ -1,6 +1,3 @@
-## 📘 Projeto Final — Técnico em Desenvolvimento de Sistemas
----
-
 #### 📂 Descrição do Repositório
 
 > Este repositório reúne todo o desenvolvimento do projeto final do curso Técnico em Desenvolvimento de Sistemas, contemplando **Front-end** e **Back-end**.  
