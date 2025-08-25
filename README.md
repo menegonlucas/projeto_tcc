@@ -10,3 +10,7 @@ As atualizações são frequentes para garantir o progresso contínuo e o versio
 
 1. **Página de Início** que o usuário pode procurar por livros na API integrada ao projeto.
 2. **Página do perfil do usuário.** Aqui, você pode colocar seus livros, filtrar, atualizar progresso e realizar comentários.
+
+---
+
+- Na pasta *docs* você terá acesso a documentação completa atualizada
