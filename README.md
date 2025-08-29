@@ -4,7 +4,7 @@
 As atualizações são frequentes para garantir o progresso contínuo e o versionamento seguro dos arquivos.
 
 ---
-##### O projeto está organizado da seguinte maneira: 
+#### O projeto está organizado da seguinte maneira: 
 
 1. **Página de Login**
 2. **Página de Início** que o usuário pode procurar por livros na API integrada ao projeto.
