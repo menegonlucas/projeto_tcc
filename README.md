@@ -13,3 +13,4 @@ As atualizações são frequentes para garantir o progresso contínuo e o versio
 ---
 
 - Na pasta *docs* você terá acesso a documentação completa atualizada
+- Acesse o site  https://menegonlucas.github.io/projeto_tcc/
