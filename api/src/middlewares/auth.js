@@ -6,7 +6,7 @@ function autenticarToken(req, res, next) {
 
   if (!token) return res.status(401).json({ error: 'Token não fornecido.' });
 
-  jwt.verify(token, 'seuSegredoJWT', (err, user) => {
+  jwt.verify(token, process.env.JWT_SECRET || 'seuSegredoJWT', (err, user) => {
     if (err) return res.status(403).json({ error: 'Token inválido.' });
 
     req.user = user;

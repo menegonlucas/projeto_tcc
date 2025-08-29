@@ -6,6 +6,7 @@ const livroController = require('./controllers/livroController');
 const usuarioController = require('./controllers/usuarioController');
 const registroController = require('./controllers/registroController');
 const booksRouter = require('./controllers/controllerapi');
+const authController = require('./controllers/authController');
 
 // Middlewares
 const validateUser = require('./middlewares/validateUser');
@@ -48,7 +49,11 @@ routes.post('/registros', autenticarToken, registroController.create);
 routes.put('/registros/:id', autenticarToken, isAdmin, registroController.update);
 routes.delete('/registros/:id', autenticarToken, isAdmin, registroController.remove);
 
+routes.post('/auth/login', authController.login);
+
 // ------------------- GOOGLE BOOKS API -------------------
 routes.use('/books', booksRouter);
+
+
 
 module.exports = routes;
