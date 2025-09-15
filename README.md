@@ -24,7 +24,7 @@ As atualizações são frequentes para garantir o progresso contínuo e o versio
 
 ## 🔗 Links Úteis
 
-- Repositório Front-end:
+- Repositório Front-end: [https://github.com/menegonlucas/Front-end_tcc.git]
 - Repositório Back-end:
 - Canva das documentações e revisões do projeto:
 - Repositório Mobile:
