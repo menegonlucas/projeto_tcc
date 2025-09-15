@@ -1,6 +1,3 @@
-# 📘 Projeto Final — Técnico em Desenvolvimento de Sistemas
-
----
 
 ## 📂 Descrição do Repositório
 
@@ -18,15 +15,13 @@ As atualizações são frequentes para garantir o progresso contínuo e o versio
 ---
 
 - A documentação completa e atualizada está disponível na pasta *docs*.
-- Acesse o site: [https://menegonlucas.github.io/projeto_tcc/](https://menegonlucas.github.io/projeto_tcc/)
 
 ---
 
 ## 🔗 Links Úteis
 
-- Repositório Front-end: [https://github.com/menegonlucas/Front-end_tcc.git]
+- Repositório Front-end: https://github.com/menegonlucas/Front-end_tcc.git
 - Repositório Back-end:
-- Canva das documentações e revisões do projeto:
 - Repositório Mobile:
+- Canva das documentações e revisões do projeto:
 
----
