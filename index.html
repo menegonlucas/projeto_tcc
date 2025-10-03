@@ -98,9 +98,7 @@
                 }
 
                 try {
-                    // 👉 se rodar local: "http://localhost:3000/api/auth/login"
-                    // 👉 se rodar no vercel: "https://tcc-back-2025.vercel.app/api/auth/login"
-                    const res = await fetch('/api/auth/login', {
+                    const res = await fetch("https://tcc-back-2025.vercel.app/api/auth/login", {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ email, senha }) // atenção: backend espera "senha"
